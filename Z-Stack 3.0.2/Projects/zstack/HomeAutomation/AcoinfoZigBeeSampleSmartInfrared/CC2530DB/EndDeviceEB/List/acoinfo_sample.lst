@@ -1,0 +1,2605 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               30/Jul/2021  11:49:08
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample.c
+#    Command line       =  
+#        -f C:\Users\WenHao\AppData\Local\Temp\EW2FE.tmp
+#        ("D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample.c"
+#        -D CSTX_BOARD -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE
+#        -D xPOWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D
+#        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
+#        xMT_APP_CNF_FUNC -D LCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D
+#        ZCL_IDENTIFY -D ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D ZCL_BASIC -D
+#        ZCL_REPORTING_DEVICE -D HAL_LED=TRUE -D HAL_UART=TRUE -D HAL_KEY=TRUE
+#        -D ISR_KEYINTERRUPT -lC "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List"
+#        -lA "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List"
+#        --diag_suppress Pe001,Pa010 -o
+#        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+#        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\Source\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\Source\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  Chinese (Simplified)_China.936
+#    List file          =  
+#        D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List\acoinfo_sample.lst
+#    Object file        =  
+#        D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\Obj\acoinfo_sample.r51
+#
+###############################################################################
+
+D:\work\zigbee\ti_cc2530_zstack\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample.c
+      1          /**************************************************************************************************
+      2          Filename:       acoinfo_samplesw.c
+      3          Revised:        $Date: 2015-08-19 17:11:00 -0700 (Wed, 19 Aug 2015) $
+      4          Revision:       $Revision: 44460 $
+      5          
+      6          Description:    Acoinfo sample switch application.
+      7          
+      8          Copyright 2006-2013 Texas Instruments Incorporated. All rights reserved.
+      9          
+     10          IMPORTANT: Your use of this Software is limited to those specific rights
+     11          granted under the terms of a software license agreement between the user
+     12          who downloaded the software, his/her employer (which must be your employer)
+     13          and Texas Instruments Incorporated (the "License").  You may not use this
+     14          Software unless you agree to abide by the terms of the License. The License
+     15          limits your use, and you acknowledge, that the Software may not be modified,
+     16          copied or distributed unless embedded on a Texas Instruments microcontroller
+     17          or used solely and exclusively in conjunction with a Texas Instruments radio
+     18          frequency transceiver, which is integrated into your product.  Other than for
+     19          the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     20          works of, modify, distribute, perform, display or sell this Software and/or
+     21          its documentation for any purpose.
+     22          
+     23          YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     24          PROVIDED 鎻係 IS锟� WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     25          INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     26          NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     27          TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     28          NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     29          LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     30          INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     31          OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     32          OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     33          (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     34          
+     35          Should you have any questions regarding your right to use this Software,
+     36          contact Texas Instruments Incorporated at www.TI.com.
+     37          **************************************************************************************************/
+     38          
+     39          /*********************************************************************
+     40          * INCLUDES
+     41          */
+     42          #include "ZComDef.h"
+     43          #include "OSAL.h"
+     44          #include "AF.h"
+     45          #include "ZDApp.h"
+     46          #include "ZDObject.h"
+     47          #include "ZDProfile.h"
+     48          #include "MT_SYS.h"
+     49          
+     50          #include "zcl.h"
+     51          #include "zcl_general.h"
+     52          #include "zcl_ha.h"
+     53          #include "acoinfo_sample.h"
+     54          #include "zcl_diagnostic.h"
+     55          
+     56          #include "onboard.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+     57          #include "hal_led.h"
+     58          #include "hal_key.h"
+     59          #include "hal_uart.h"
+     60          #include "hal_adc.h"
+     61          
+     62          #include "bdb.h"
+     63          #include "bdb_interface.h"
+     64          
+     65          #include "acoinfo_generic_profile.h"
+     66          #include <stdio.h>
+     67          #include <stdarg.h>
+     68          
+     69          /*********************************************************************
+     70          * MACROS
+     71          */
+     72          /*********************************************************************
+     73          * CONSTANTS
+     74          */
+     75          // Events for the sample app
+     76          #define SAMPLEAPP_END_DEVICE_REJOIN_EVT     0x0001
+     77          #define SAMPLEAPP_END_DEVICE_REJOIN_DELAY   1000
+     78          
+     79          #define SAMPLEAPP_END_DEVICE_REPORT_EVT     0x0002 // 事件 ID
+     80          #define SAMPLEAPP_END_DEVICE_REPORT_DELAY   5000   // 任务周期
+     81          
+     82          #define ACOINFO_SAMPLE_LED_ATTR_ID          ACOINFO_ZB_DIO_ATTR_BASE + ACOINFO_SAMPLE_LED_ATTR_CHAN_NUM
+     83          
+     84          #define ACOINFO_SAMPLE_VDD_ATTR_ID          ACOINFO_ZB_AIO_ATTR_BASE + ACOINFO_SAMPLE_VDD_ATTR_CHAN_NUM
+     85          
+     86          #define ACOINFO_SAMPLE_HUMAN_ATTR_ID        ACOINFO_ZB_AIO_ATTR_BASE + ACOINFO_SAMPLE_HUMAN_ATTR_CHAN_NUM
+     87          
+     88          #define ACOINFO_SAMPLE_LDR_ATTR_ID          ACOINFO_ZB_AIO_ATTR_BASE + ACOINFO_SAMPLE_LDR_ATTR_CHAN_NUM
+     89          
+     90          #define ACOINFO_SAMPLE_REP_ATTR_ID          ACOINFO_ZB_MEM_ATTR_BASE + ACOINFO_SAMPLE_REP_ATTR_CHAN_NUM
+     91          
+     92          #define SAMPLEAPP_DIO_ATTR_DATA_LEN         1
+     93          
+     94          #define SAMPLEAPP_AIO_ATTR_DATA_LEN         4
+     95          
+     96          #define SAMPLEAPP_MEM_ATTR_DATA_LEN         4
+     97          
+     98          // Uart Tx buffer length
+     99          #define ZCLSAMPLESW_UART_BUF_LEN            128
+    100          
+    101          /*
+    102          *
+    103          */
+    104          #define DATA_PIN_6 P0_6            //定义P0.6 红外传感器
+    105          #define DATA_PIN_5 P0_5            //定义P0.5 光敏传感器
+    106          
+    107          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    108          static char *acoinfoSample_NwkState[] = {
+   \                     acoinfoSample_NwkState:
+   \   000000                DS 32
+   \   000020                REQUIRE `?<Initializer for acoinfoSample_NwkState>`
+   \   000020                REQUIRE __INIT_XDATA_I
+    109            "Initialized - not started automatically",
+    110            "Initialized - not connected to anything",
+    111            "Discovering PAN's to join",
+    112            "Joining a PAN",
+    113            "ReJoining a PAN in secure mode scanning in current channel, only for end devices",
+    114            "Joined but not yet authenticated by trust center",
+    115            "Started as device after authentication",
+    116            "Device joined, authenticated and is a router",
+    117            "Started as Zigbee Coordinator",
+    118            "Started as Zigbee Coordinator",
+    119            "Device has lost information about its parent..",
+    120            "Device is sending KeepAlive message to its parent",
+    121            "Device is waiting before trying to rejoin",
+    122            "ReJoining a PAN in secure mode scanning in all channels, only for end devices",
+    123            "ReJoining a PAN in Trust center mode scanning in current channel, only for end devices",
+    124            "ReJoining a PAN in Trust center mode scanning in all channels, only for end devices"
+    125          };
+    126          
+    127          /*********************************************************************
+    128          * LOCAL VARIABLES
+    129          */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    130          static byte acoinfo_Sample_TaskID;
+   \                     acoinfo_Sample_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    131          
+    132          #if HAL_UART == TRUE
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    133          static char acoinfoSample_UartBuf[ZCLSAMPLESW_UART_BUF_LEN];
+   \                     acoinfoSample_UartBuf:
+   \   000000                DS 128
+   \   000080                REQUIRE __INIT_XDATA_Z
+    134          #endif
+    135          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    136          static bool  LedOnOffStatus = false;
+   \                     LedOnOffStatus:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    137          static bool  LdrStatus = false;  // 光敏状态 
+   \                     LdrStatus:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    138          static bool  HumanStatus = false; // 人体状态
+   \                     HumanStatus:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    139          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    140          static float vddValue = 0;
+   \                     vddValue:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    141          static uint32 repValue = 0;
+   \                     repValue:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+    142          /*********************************************************************
+    143          * LOCAL FUNCTIONS
+    144          */
+    145          static void acoinfoSample_HandleKeys( byte shift, byte keys );
+    146          static void acoinfoSample_HandleStateChange( devStates_t  status );
+    147          static void acoinfoSample_ProcessCommissioningStatus( bdbCommissioningModeMsg_t *bdbCommissioningModeMsg );
+    148          static void acoinfoSample_ReportEvent( void );
+    149          static ZStatus_t acoinfoSample_ReadWriteCallBack( uint16 clusterId, uint16 attrId, uint8 oper,uint8 *pValue, uint16 *pLen );
+    150          static ZStatus_t acoinfoSample_HandleDioData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen );
+    151          static ZStatus_t acoinfoSample_HandleAioData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen );
+    152          static ZStatus_t acoinfoSample_HandleMemData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen );
+    153          static void acoinfoSample_LedOnOff( bool status );
+    154          static float acoinfoSample_VddValueGet( void );
+    155          
+    156          #if HAL_UART == TRUE
+    157          static void acoinfoSample_InitUart( void );
+    158          #endif
+    159          
+    160          /*********************************************************************
+    161          * REFERENCED EXTERNALS
+    162          */
+    163          extern int16 zdpExternalStateTaskID;
+    164          
+    165          extern void ZDAppCheckForHoldKey( void );
+    166          
+    167          /*********************************************************************
+    168          * @fn          acoinfoSample_Init
+    169          *
+    170          * @brief       Initialization function for the zclGeneral layer.
+    171          *
+    172          * @param       none
+    173          *
+    174          * @return      none
+    175          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    176          void acoinfoSample_Init( byte task_id )
+   \                     acoinfoSample_Init:
+    177          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV       A,#-0x1d
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+   \   00000A   E9           MOV       A,R1
+    178            acoinfo_Sample_TaskID = task_id;
+   \   00000B   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   00000E   F0           MOVX      @DPTR,A
+    179            
+    180          #if HAL_UART == TRUE
+    181            acoinfoSample_InitUart();
+   \   00000F   85..82       MOV       DPL,?XSP + 0
+   \   000012   85..83       MOV       DPH,?XSP + 1
+   \   000015   7401         MOV       A,#0x1
+   \   000017   F0           MOVX      @DPTR,A
+   \   000018   12....       LCALL     ?XSTACK_DISP0_8
+   \   00001B   7404         MOV       A,#0x4
+   \   00001D   F0           MOVX      @DPTR,A
+   \   00001E   7402         MOV       A,#0x2
+   \   000020   12....       LCALL     ?XSTACK_DISP0_8
+   \   000023   E4           CLR       A
+   \   000024   F0           MOVX      @DPTR,A
+   \   000025   7403         MOV       A,#0x3
+   \   000027   12....       LCALL     ?XSTACK_DISP0_8
+   \   00002A   E4           CLR       A
+   \   00002B   F0           MOVX      @DPTR,A
+   \   00002C   A3           INC       DPTR
+   \   00002D   F0           MOVX      @DPTR,A
+   \   00002E   740A         MOV       A,#0xa
+   \   000030   12....       LCALL     ?XSTACK_DISP0_8
+   \   000033   7480         MOV       A,#-0x80
+   \   000035   12....       LCALL     ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   000038   7412         MOV       A,#0x12
+   \   00003A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00003D   E4           CLR       A
+   \   00003E   F0           MOVX      @DPTR,A
+   \   00003F   A3           INC       DPTR
+   \   000040   F0           MOVX      @DPTR,A
+   \   000041   7405         MOV       A,#0x5
+   \   000043   12....       LCALL     ?XSTACK_DISP0_8
+   \   000046   7406         MOV       A,#0x6
+   \   000048   F0           MOVX      @DPTR,A
+   \   000049   7416         MOV       A,#0x16
+   \   00004B   12....       LCALL     ?XSTACK_DISP0_8
+   \   00004E   7401         MOV       A,#0x1
+   \   000050   F0           MOVX      @DPTR,A
+   \   000051   741B         MOV       A,#0x1b
+   \   000053   12....       LCALL     ?XSTACK_DISP0_8
+   \   000056   E4           CLR       A
+   \   000057   F0           MOVX      @DPTR,A
+   \   000058   A3           INC       DPTR
+   \   000059   F0           MOVX      @DPTR,A
+   \   00005A                ; Setup parameters for call to function HalUARTOpen
+   \   00005A   AA..         MOV       R2,?XSP + 0
+   \   00005C   AB..         MOV       R3,?XSP + 1
+   \   00005E   F9           MOV       R1,A
+   \   00005F   12....       LCALL     `??HalUARTOpen::?relay`; Banked call to: HalUARTOpen
+    182          #endif
+    183            
+    184            /*
+    185            * 初始化 人体红外传感器，光敏传感器
+    186            */
+    187            P0SEL &= 0x9F; //设置P0.5,P0.6端口为普通IO
+   \   000062   53F39F       ANL       0xf3,#0x9f
+    188            P0DIR &= 0x9F; //设置P0.5,P0.6端口为输入
+   \   000065   53FD9F       ANL       0xfd,#0x9f
+    189            
+    190            /*
+    191            *  Register the Simple Descriptor for this application
+    192            */
+    193            bdb_RegisterSimpleDescriptor( &zclSampleSw_SimpleDesc );
+   \   000068                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
+   \   000068   7A..         MOV       R2,#zclSampleSw_SimpleDesc & 0xff
+   \   00006A   7B..         MOV       R3,#(zclSampleSw_SimpleDesc >> 8) & 0xff
+   \   00006C   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
+    194            
+    195            /*
+    196            *  Register the application's attribute list
+    197            */
+    198            zcl_registerAttrList( ACOINFO_ZB_ENDPOINT, acoinfoSample_NumAttributes, acoinfoSample_Attrs );
+   \   00006F                ; Setup parameters for call to function zcl_registerAttrList
+   \   00006F   7C..         MOV       R4,#acoinfoSample_Attrs & 0xff
+   \   000071   7D..         MOV       R5,#(acoinfoSample_Attrs >> 8) & 0xff
+   \   000073   90....       MOV       DPTR,#acoinfoSample_NumAttributes
+   \   000076   E4           CLR       A
+   \   000077   93           MOVC      A,@A+DPTR
+   \   000078   FA           MOV       R2,A
+   \   000079   7901         MOV       R1,#0x1
+   \   00007B   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
+    199            
+    200            /*
+    201            * Register the application's callback function to read/write attribute data
+    202            */
+    203            zcl_registerReadWriteCB( ACOINFO_ZB_ENDPOINT, acoinfoSample_ReadWriteCallBack, NULL );
+   \   00007E                ; Setup parameters for call to function zcl_registerReadWriteCB
+   \   00007E   7C00         MOV       R4,#0x0
+   \   000080   7D00         MOV       R5,#0x0
+   \   000082   7A..         MOV       R2,#`??acoinfoSample_ReadWriteCallBack::?relay` & 0xff
+   \   000084   7B..         MOV       R3,#(`??acoinfoSample_ReadWriteCallBack::?relay` >> 8) & 0xff
+   \   000086   7901         MOV       R1,#0x1
+   \   000088   12....       LCALL     `??zcl_registerReadWriteCB::?relay`; Banked call to: zcl_registerReadWriteCB
+    204            
+    205            /*
+    206            *  Register for all key events - This app will handle all key events
+    207            */
+    208            RegisterForKeys( acoinfo_Sample_TaskID );
+   \   00008B                ; Setup parameters for call to function RegisterForKeys
+   \   00008B   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   00008E   E0           MOVX      A,@DPTR
+   \   00008F   F9           MOV       R1,A
+   \   000090   12....       LCALL     `??RegisterForKeys::?relay`; Banked call to: RegisterForKeys
+    209            
+    210            bdb_RegisterCommissioningStatusCB( acoinfoSample_ProcessCommissioningStatus );
+   \   000093                ; Setup parameters for call to function bdb_RegisterCommissioningStatusCB
+   \   000093   7A..         MOV       R2,#`??acoinfoSample_ProcessCommissioningStatus::?re` & 0xff
+   \   000095   7B..         MOV       R3,#(`??acoinfoSample_ProcessCommissioningStatus::?re` >> 8) & 0xff
+   \   000097   12....       LCALL     `??bdb_RegisterCommissioningStatusCB::?relay`; Banked call to: bdb_RegisterCommissioningStatusCB
+    211            
+    212            zdpExternalStateTaskID = acoinfo_Sample_TaskID;
+   \   00009A   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   00009D   E0           MOVX      A,@DPTR
+   \   00009E   90....       MOV       DPTR,#zdpExternalStateTaskID
+   \   0000A1   12....       LCALL     ?Subroutine6 & 0xFFFF
+    213            
+    214            /*
+    215            *  Start joining the network
+    216            */
+    217            bdb_StartCommissioning( BDB_COMMISSIONING_MODE_NWK_STEERING |
+    218                                   BDB_COMMISSIONING_MODE_FINDING_BINDING );
+   \                     ??CrossCallReturnLabel_14:
+   \   0000A4                ; Setup parameters for call to function bdb_StartCommissioning
+   \   0000A4   790A         MOV       R1,#0xa
+   \   0000A6   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+    219            
+    220            osal_start_timerEx( acoinfo_Sample_TaskID, SAMPLEAPP_END_DEVICE_REPORT_EVT, SAMPLEAPP_END_DEVICE_REPORT_DELAY );
+   \   0000A9                ; Setup parameters for call to function osal_start_timerEx
+   \   0000A9   90....       MOV       DPTR,#__Constant_1388
+   \   0000AC   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   0000AF   7A02         MOV       R2,#0x2
+   \   0000B1   7B00         MOV       R3,#0x0
+   \   0000B3   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   0000B6   E0           MOVX      A,@DPTR
+   \   0000B7   F9           MOV       R1,A
+   \   0000B8   12....       LCALL     `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
+   \   0000BB   7404         MOV       A,#0x4
+   \   0000BD   12....       LCALL     ?DEALLOC_XSTACK8
+    221          }
+   \   0000C0   741D         MOV       A,#0x1d
+   \   0000C2   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000C5   7F01         MOV       R7,#0x1
+   \   0000C7   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   0000CA                REQUIRE P0SEL
+   \   0000CA                REQUIRE P0DIR
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   A3           INC       DPTR
+   \   000002   E4           CLR       A
+   \   000003   F0           MOVX      @DPTR,A
+   \   000004   22           RET
+    222          
+    223          /*********************************************************************
+    224          * @fn          zclSample_event_loop
+    225          *
+    226          * @brief       Event Loop Processor for zclGeneral.
+    227          *
+    228          * @param       none
+    229          *
+    230          * @return      none
+    231          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    232          uint16 acoinfoSample_event_loop( uint8 task_id, uint16 events )
+   \                     acoinfoSample_event_loop:
+    233          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV       A,R2
+   \   000006   FE           MOV       R6,A
+   \   000007   EB           MOV       A,R3
+   \   000008   FF           MOV       R7,A
+    234            afIncomingMSGPacket_t *MSGpkt;
+    235            (void)task_id;
+    236            
+    237            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL       A,#0x80
+   \   00000B   7028         JNZ       ??acoinfoSample_event_loop_0
+    238            {
+    239              while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( acoinfo_Sample_TaskID )) )
+    240              {
+    241                switch ( MSGpkt->hdr.event )
+    242                {
+    243                case KEY_CHANGE:
+    244                  acoinfoSample_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    245                  break;
+    246                  
+    247                case ZDO_STATE_CHANGE:
+    248                  acoinfoSample_HandleStateChange( (devStates_t)MSGpkt->hdr.status );
+    249                  break;
+    250                  
+    251                default:
+    252                  break;
+    253                }
+    254                
+    255                /*
+    256                *  Release the memory
+    257                */
+    258                osal_msg_deallocate( (uint8 *)MSGpkt );
+    259              }
+    260              
+    261              /*
+    262              *  return unprocessed events
+    263              */
+    264              return ( events ^ SYS_EVENT_MSG );
+    265            }
+    266            
+    267          #if ZG_BUILD_ENDDEVICE_TYPE    
+    268            if ( events & SAMPLEAPP_END_DEVICE_REJOIN_EVT )
+   \   00000D   EE           MOV       A,R6
+   \   00000E   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000010   4003         JC        $+5
+   \   000012   02....       LJMP      ??acoinfoSample_event_loop_1 & 0xFFFF
+    269            {
+    270              debugMessage( "attempt rejoin\r\n" );
+   \   000015                ; Setup parameters for call to function debugMessage
+   \   000015   7A..         MOV       R2,#`?<Constant "attempt rejoin\\r\\n">` & 0xff
+   \   000017   7B..         MOV       R3,#(`?<Constant "attempt rejoin\\r\\n">` >> 8) & 0xff
+   \   000019   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+    271              bdb_ZedAttemptRecoverNwk();
+   \   00001C                ; Setup parameters for call to function bdb_ZedAttemptRecoverNwk
+   \   00001C   12....       LCALL     `??bdb_ZedAttemptRecoverNwk::?relay`; Banked call to: bdb_ZedAttemptRecoverNwk
+    272              return ( events ^ SAMPLEAPP_END_DEVICE_REJOIN_EVT );
+   \   00001F   EE           MOV       A,R6
+   \   000020   6401         XRL       A,#0x1
+   \   000022   FA           MOV       R2,A
+   \   000023   EF           MOV       A,R7
+   \   000024   02....       LJMP      ??acoinfoSample_event_loop_2 & 0xFFFF
+   \                     ??acoinfoSample_event_loop_3:
+   \   000027                ; Setup parameters for call to function HalLedSet
+    273            }
+   \   000027   7A00         MOV       R2,#0x0
+   \                     ??acoinfoSample_event_loop_4:
+   \   000029   7904         MOV       R1,#0x4
+   \   00002B   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+   \                     ??acoinfoSample_event_loop_5:
+   \   00002E                ; Setup parameters for call to function osal_msg_deallocate
+   \   00002E   AA..         MOV       R2,?V0
+   \   000030   AB..         MOV       R3,?V1
+   \   000032   12....       LCALL     `??osal_msg_deallocate::?relay`; Banked call to: osal_msg_deallocate
+   \                     ??acoinfoSample_event_loop_0:
+   \   000035                ; Setup parameters for call to function osal_msg_receive
+   \   000035   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   000038   E0           MOVX      A,@DPTR
+   \   000039   F9           MOV       R1,A
+   \   00003A   12....       LCALL     `??osal_msg_receive::?relay`; Banked call to: osal_msg_receive
+   \   00003D   8A..         MOV       ?V0,R2
+   \   00003F   8B..         MOV       ?V1,R3
+   \   000041   EA           MOV       A,R2
+   \   000042   45..         ORL       A,?V1
+   \   000044   7003         JNZ       $+5
+   \   000046   02....       LJMP      ??acoinfoSample_event_loop_6 & 0xFFFF
+   \   000049   8A82         MOV       DPL,R2
+   \   00004B   8B83         MOV       DPH,R3
+   \   00004D   E0           MOVX      A,@DPTR
+   \   00004E   2440         ADD       A,#0x40
+   \   000050   6006         JZ        ??acoinfoSample_event_loop_7
+   \   000052   24EF         ADD       A,#-0x11
+   \   000054   602B         JZ        ??acoinfoSample_event_loop_8
+   \   000056   80D6         SJMP      ??acoinfoSample_event_loop_5
+   \                     ??acoinfoSample_event_loop_7:
+   \   000058   A3           INC       DPTR
+   \   000059   A3           INC       DPTR
+   \   00005A   A3           INC       DPTR
+   \   00005B   E0           MOVX      A,@DPTR
+   \   00005C   F5..         MOV       ?V2,A
+   \   00005E   A2E5         MOV       C,0xE0 /* A   */.5
+   \   000060   5012         JNC       ??acoinfoSample_event_loop_9
+   \   000062                ; Setup parameters for call to function bdb_resetLocalAction
+   \   000062   12....       LCALL     `??bdb_resetLocalAction::?relay`; Banked call to: bdb_resetLocalAction
+   \   000065                ; Setup parameters for call to function ZDAppCheckForHoldKey
+   \   000065   12....       LCALL     `??ZDAppCheckForHoldKey::?relay`; Banked call to: ZDAppCheckForHoldKey
+   \   000068                ; Setup parameters for call to function debugMessage
+   \   000068   7A..         MOV       R2,#`?<Constant "booting to skip past ...">` & 0xff
+   \   00006A   7B..         MOV       R3,#(`?<Constant "booting to skip past ...">` >> 8) & 0xff
+   \   00006C   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   00006F                ; Setup parameters for call to function bdb_StartCommissioning
+   \   00006F   790A         MOV       R1,#0xa
+   \   000071   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+   \                     ??acoinfoSample_event_loop_9:
+   \   000074   E5..         MOV       A,?V2
+   \   000076   70B6         JNZ       ??acoinfoSample_event_loop_5
+   \   000078                ; Setup parameters for call to function debugMessage
+   \   000078   7A..         MOV       R2,#`?<Constant "chick button:S2 \\r\\n">` & 0xff
+   \   00007A   7B..         MOV       R3,#(`?<Constant "chick button:S2 \\r\\n">` >> 8) & 0xff
+   \   00007C   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   00007F   80AD         SJMP      ??acoinfoSample_event_loop_5
+   \                     ??acoinfoSample_event_loop_8:
+   \   000081   A3           INC       DPTR
+   \   000082   E0           MOVX      A,@DPTR
+   \   000083   F5..         MOV       ?V2,A
+   \   000085                ; Setup parameters for call to function debugMessage
+   \   000085   25E0         ADD       A,0xE0 /* A   */
+   \   000087   F8           MOV       R0,A
+   \   000088   E4           CLR       A
+   \   000089   33           RLC       A
+   \   00008A   F9           MOV       R1,A
+   \   00008B   74..         MOV       A,#acoinfoSample_NwkState & 0xff
+   \   00008D   28           ADD       A,R0
+   \   00008E   F582         MOV       DPL,A
+   \   000090   74..         MOV       A,#(acoinfoSample_NwkState >> 8) & 0xff
+   \   000092   39           ADDC      A,R1
+   \   000093   F583         MOV       DPH,A
+   \   000095   12....       LCALL     ?PUSH_XSTACK8_X_TWO
+   \   000098   7A..         MOV       R2,#`?<Constant "ZDO state: %s\\r\\n">` & 0xff
+   \   00009A   7B..         MOV       R3,#(`?<Constant "ZDO state: %s\\r\\n">` >> 8) & 0xff
+   \   00009C   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   00009F   7402         MOV       A,#0x2
+   \   0000A1   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000A4   E5..         MOV       A,?V2
+   \   0000A6   7003         JNZ       $+5
+   \   0000A8   02....       LJMP      ??acoinfoSample_event_loop_3 & 0xFFFF
+   \   0000AB   14           DEC       A
+   \   0000AC   7003         JNZ       $+5
+   \   0000AE   02....       LJMP      ??acoinfoSample_event_loop_3 & 0xFFFF
+   \   0000B1   14           DEC       A
+   \   0000B2   6013         JZ        ??acoinfoSample_event_loop_10
+   \   0000B4   24FC         ADD       A,#-0x4
+   \   0000B6   600A         JZ        ??acoinfoSample_event_loop_11
+   \   0000B8   24FC         ADD       A,#-0x4
+   \   0000BA   7003         JNZ       $+5
+   \   0000BC   02....       LJMP      ??acoinfoSample_event_loop_3 & 0xFFFF
+   \   0000BF   02....       LJMP      ??acoinfoSample_event_loop_5 & 0xFFFF
+   \                     ??acoinfoSample_event_loop_11:
+   \   0000C2                ; Setup parameters for call to function HalLedSet
+   \   0000C2   7A01         MOV       R2,#0x1
+   \   0000C4   02....       LJMP      ??acoinfoSample_event_loop_4 & 0xFFFF
+   \                     ??acoinfoSample_event_loop_10:
+   \   0000C7                ; Setup parameters for call to function HalLedBlink
+   \   0000C7   7C90         MOV       R4,#-0x70
+   \   0000C9   7D01         MOV       R5,#0x1
+   \   0000CB   7B32         MOV       R3,#0x32
+   \   0000CD   7A0A         MOV       R2,#0xa
+   \   0000CF   7904         MOV       R1,#0x4
+   \   0000D1   12....       LCALL     `??HalLedBlink::?relay`; Banked call to: HalLedBlink
+   \   0000D4   02....       LJMP      ??acoinfoSample_event_loop_5 & 0xFFFF
+   \                     ??acoinfoSample_event_loop_6:
+   \   0000D7   EE           MOV       A,R6
+   \   0000D8   FA           MOV       R2,A
+   \   0000D9   EF           MOV       A,R7
+   \   0000DA   6480         XRL       A,#0x80
+   \                     ??acoinfoSample_event_loop_2:
+   \   0000DC   FB           MOV       R3,A
+   \   0000DD   8022         SJMP      ??acoinfoSample_event_loop_12
+    274          #endif
+    275            
+    276            if ( events & SAMPLEAPP_END_DEVICE_REPORT_EVT )
+   \                     ??acoinfoSample_event_loop_1:
+   \   0000DF   5402         ANL       A,#0x2
+   \   0000E1   601A         JZ        ??acoinfoSample_event_loop_13
+    277            {
+    278              /*
+    279              * 处理上报事件
+    280              */
+    281              acoinfoSample_ReportEvent();
+   \   0000E3                ; Setup parameters for call to function acoinfoSample_ReportEvent
+   \   0000E3   12....       LCALL     `??acoinfoSample_ReportEvent::?relay`; Banked call to: acoinfoSample_ReportEvent
+    282              
+    283              /*
+    284              * 启动下一次任务
+    285              */
+    286              osal_start_timerEx( acoinfo_Sample_TaskID, 
+    287                                 SAMPLEAPP_END_DEVICE_REPORT_EVT, 			 					
+    288                                 SAMPLEAPP_END_DEVICE_REPORT_DELAY );
+   \   0000E6                ; Setup parameters for call to function osal_start_timerEx
+   \   0000E6   90....       MOV       DPTR,#__Constant_1388
+   \   0000E9   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   0000EC   7A02         MOV       R2,#0x2
+   \   0000EE   7B00         MOV       R3,#0x0
+   \   0000F0   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   0000F3   E0           MOVX      A,@DPTR
+   \   0000F4   F9           MOV       R1,A
+   \   0000F5   12....       LCALL     `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
+   \   0000F8   7404         MOV       A,#0x4
+   \   0000FA   12....       LCALL     ?DEALLOC_XSTACK8
+    289            }
+    290            /*
+    291            *  Discard unknown events
+    292            */
+    293            return 0;
+   \                     ??acoinfoSample_event_loop_13:
+   \   0000FD   7A00         MOV       R2,#0x0
+   \   0000FF   7B00         MOV       R3,#0x0
+   \                     ??acoinfoSample_event_loop_12:
+   \   000101   7F04         MOV       R7,#0x4
+   \   000103   02....       LJMP      ?BANKED_LEAVE_XDATA
+    294          }
+    295          
+    296          /*********************************************************************
+    297          * @fn      debugMessage
+    298          *
+    299          * @brief   Debug message
+    300          *
+    301          * @param   fmt
+    302          *
+    303          * @return  none
+    304          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    305          void debugMessage( const char *fmt, ... )
+   \                     debugMessage:
+    306          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000   74F6         MOV       A,#-0xa
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 2
+   \   000005   74FE         MOV       A,#-0x2
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+    307          #if HAL_UART == TRUE
+    308            int     i;
+    309            va_list ap;
+    310            
+    311            va_start( ap, fmt );
+   \   00000A   740C         MOV       A,#0xc
+   \   00000C   12....       LCALL     ?XSTACK_DISP100_8
+   \   00000F   85..82       MOV       DPL,?XSP + 0
+   \   000012   85..83       MOV       DPH,?XSP + 1
+   \   000015   E8           MOV       A,R0
+   \   000016   F0           MOVX      @DPTR,A
+   \   000017   A3           INC       DPTR
+   \   000018   E9           MOV       A,R1
+   \   000019   F0           MOVX      @DPTR,A
+    312            i = vsprintf( acoinfoSample_UartBuf, fmt, ap );
+   \   00001A                ; Setup parameters for call to function vsprintf
+   \   00001A   A8..         MOV       R0,?XSP + 0
+   \   00001C   A9..         MOV       R1,?XSP + 1
+   \   00001E   88..         MOV       ?V0,R0
+   \   000020   89..         MOV       ?V1,R1
+   \   000022   78..         MOV       R0,#?V0
+   \   000024   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000027   EA           MOV       A,R2
+   \   000028   FC           MOV       R4,A
+   \   000029   EB           MOV       A,R3
+   \   00002A   FD           MOV       R5,A
+   \   00002B   7A..         MOV       R2,#acoinfoSample_UartBuf & 0xff
+   \   00002D   7B..         MOV       R3,#(acoinfoSample_UartBuf >> 8) & 0xff
+   \   00002F   12....       LCALL     `??vsprintf::?relay`; Banked call to: vsprintf
+   \   000032   7402         MOV       A,#0x2
+   \   000034   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000037   8A..         MOV       ?V0,R2
+   \   000039   8B..         MOV       ?V1,R3
+   \   00003B   AC..         MOV       R4,?V0
+   \   00003D   AD..         MOV       R5,?V1
+    313            va_end( ap );
+    314            HalUARTWrite( HAL_UART_PORT_0,(uint8 *)acoinfoSample_UartBuf, i );
+   \   00003F                ; Setup parameters for call to function HalUARTWrite
+   \   00003F   7A..         MOV       R2,#acoinfoSample_UartBuf & 0xff
+   \   000041   7B..         MOV       R3,#(acoinfoSample_UartBuf >> 8) & 0xff
+   \   000043   7900         MOV       R1,#0x0
+   \   000045   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+    315          #endif
+    316          }
+   \   000048   7402         MOV       A,#0x2
+   \   00004A   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00004D   7F02         MOV       R7,#0x2
+   \   00004F   02....       LJMP      ?BANKED_LEAVE_XDATA
+    317          
+    318          #if HAL_UART == TRUE
+    319          /*********************************************************************
+    320          * @fn      zclSampleSw_InitUart
+    321          *
+    322          * @brief   Initialization function for serial port
+    323          *
+    324          * @param   none
+    325          *
+    326          * @return  none
+    327          */
+    328          static void acoinfoSample_InitUart( void )
+    329          {
+    330            halUARTCfg_t uartConfig;
+    331            
+    332            /*
+    333            *  UART Configuration
+    334            */
+    335            uartConfig.configured           = TRUE;
+    336            uartConfig.baudRate             = HAL_UART_BR_115200;
+    337            uartConfig.flowControl          = FALSE;
+    338            uartConfig.flowControlThreshold = 0;
+    339            uartConfig.rx.maxBufSize        = ZCLSAMPLESW_UART_BUF_LEN;
+    340            uartConfig.tx.maxBufSize        = 0;
+    341            uartConfig.idleTimeout          = 6;
+    342            uartConfig.intEnable            = TRUE;
+    343            uartConfig.callBackFunc         = NULL;
+    344            
+    345            /*
+    346            *  Start UART
+    347            */
+    348            HalUARTOpen( HAL_UART_PORT_0, &uartConfig );
+    349          }
+    350          #endif
+    351          
+    352          /*********************************************************************
+    353          * @fn      zclSampleSw_HandleKeys
+    354          *
+    355          * @brief   Handles all key events for this device.
+    356          *
+    357          * @param   shift - true if in shift/alt.
+    358          * @param   keys - bit field for key events. Valid entries:
+    359          *                 HAL_KEY_SW_5
+    360          *                 HAL_KEY_SW_4
+    361          *                 HAL_KEY_SW_2
+    362          *                 HAL_KEY_SW_1
+    363          *
+    364          * @return  none
+    365          */
+    366          static void acoinfoSample_HandleKeys( byte shift, byte keys )
+    367          {
+    368            //s1有被按下
+    369            if ( keys & HAL_KEY_SW_6 )
+    370            {
+    371              bdb_resetLocalAction();
+    372              ZDAppCheckForHoldKey();
+    373              debugMessage( "booting to skip past NV Restore\r\n" );
+    374              bdb_StartCommissioning( BDB_COMMISSIONING_MODE_NWK_STEERING |
+    375                                     BDB_COMMISSIONING_MODE_FINDING_BINDING );
+    376            }
+    377            
+    378            //s2有被按下
+    379            if ( keys == HAL_KEY_STATE_NORMAL )
+    380            {
+    381              debugMessage( "chick button:S2 \r\n" );
+    382            }
+    383          }
+    384          
+    385          /*********************************************************************
+    386          * @fn      zclSampleSw_HandleStateChange
+    387          *
+    388          * @brief   Handles state change events for this device .
+    389          *
+    390          * @param   status - status for device:
+    391          *
+    392          * @return  none
+    393          */
+    394          static void acoinfoSample_HandleStateChange( devStates_t status )
+    395          {
+    396            debugMessage( "ZDO state: %s\r\n", acoinfoSample_NwkState[status] );
+    397            
+    398            switch(status)
+    399            {
+    400            case DEV_HOLD:
+    401            case DEV_INIT:
+    402            case DEV_NWK_ORPHAN:
+    403              HalLedSet( HAL_LED_3, HAL_LED_MODE_OFF );
+    404              break;
+    405              
+    406            case DEV_NWK_DISC:
+    407              HalLedBlink( HAL_LED_3, 10, 50, 400 );
+    408              break;
+    409              
+    410            case DEV_END_DEVICE:
+    411              HalLedSet( HAL_LED_3, HAL_LED_MODE_ON );
+    412              break;
+    413            }
+    414          }
+    415          
+    416          /*********************************************************************
+    417          * @fn      acoinfoSample_ReportEvent
+    418          *
+    419          * @brief   report event
+    420          *
+    421          * @param   none
+    422          *
+    423          * @return  none
+    424          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    425          static void acoinfoSample_ReportEvent( void )
+   \                     acoinfoSample_ReportEvent:
+    426          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000                REQUIRE ?V8
+   \   000000                REQUIRE ?V9
+   \   000000                REQUIRE ?V10
+   \   000000                REQUIRE ?V11
+   \   000000   74EC         MOV       A,#-0x14
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 20
+   \   000005                ; Auto size: 12
+   \   000005   74F4         MOV       A,#-0xc
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+    427            static uint8    seqNum = 0;
+    428            afAddrType_t    dstAddr;
+    429            zclReportCmd_t *pReportCmd;
+    430            zclReportCmd_t *iotReportCmd;
+    431            zclReportCmd_t *repReportCmd;
+    432          
+    433            
+    434            pReportCmd = (zclReportCmd_t *)osal_mem_alloc( sizeof(zclReportCmd_t) + sizeof(zclReport_t) );
+   \   00000A                ; Setup parameters for call to function osal_mem_alloc
+   \   00000A   7A06         MOV       R2,#0x6
+   \   00000C   7B00         MOV       R3,#0x0
+   \   00000E   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   000011   8A..         MOV       ?V0,R2
+   \   000013   8B..         MOV       ?V1,R3
+    435            iotReportCmd = (zclReportCmd_t *)osal_mem_alloc( sizeof(zclReportCmd_t) + sizeof(zclReport_t)*2);
+   \   000015                ; Setup parameters for call to function osal_mem_alloc
+   \   000015   7A0B         MOV       R2,#0xb
+   \   000017   7B00         MOV       R3,#0x0
+   \   000019   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   00001C   8A..         MOV       ?V2,R2
+   \   00001E   8B..         MOV       ?V3,R3
+    436            repReportCmd = (zclReportCmd_t *)osal_mem_alloc( sizeof(zclReportCmd_t) + sizeof(zclReport_t) );
+   \   000020                ; Setup parameters for call to function osal_mem_alloc
+   \   000020   7A06         MOV       R2,#0x6
+   \   000022   7B00         MOV       R3,#0x0
+   \   000024   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   000027   8A..         MOV       ?V4,R2
+   \   000029   8B..         MOV       ?V5,R3
+    437            if (pReportCmd == NULL || iotReportCmd == NULL || repReportCmd == NULL)
+   \   00002B   E5..         MOV       A,?V0
+   \   00002D   45..         ORL       A,?V1
+   \   00002F   600B         JZ        ??acoinfoSample_ReportEvent_0
+   \   000031   E5..         MOV       A,?V2
+   \   000033   45..         ORL       A,?V3
+   \   000035   6005         JZ        ??acoinfoSample_ReportEvent_0
+   \   000037   EA           MOV       A,R2
+   \   000038   45..         ORL       A,?V5
+   \   00003A   7003         JNZ       ??acoinfoSample_ReportEvent_1
+    438            {
+    439              return;
+   \                     ??acoinfoSample_ReportEvent_0:
+   \   00003C   02....       LJMP      ??acoinfoSample_ReportEvent_2 & 0xFFFF
+    440            }
+    441            
+    442            
+    443            /*
+    444            * Get Vdd value
+    445            */
+    446            vddValue = acoinfoSample_VddValueGet();
+   \                     ??acoinfoSample_ReportEvent_1:
+   \   00003F                ; Setup parameters for call to function acoinfoSample_VddValueGet
+   \   00003F   12....       LCALL     `??acoinfoSample_VddValueGet::?relay`; Banked call to: acoinfoSample_VddValueGet
+   \   000042   EA           MOV       A,R2
+   \   000043   F8           MOV       R0,A
+   \   000044   EB           MOV       A,R3
+   \   000045   F9           MOV       R1,A
+   \   000046   EC           MOV       A,R4
+   \   000047   FA           MOV       R2,A
+   \   000048   ED           MOV       A,R5
+   \   000049   FB           MOV       R3,A
+   \   00004A   90....       MOV       DPTR,#vddValue
+   \   00004D   12....       LCALL     ?XSTORE_R0123
+    447            
+    448            dstAddr.addrMode       = afAddr16Bit;
+   \   000050   7408         MOV       A,#0x8
+   \   000052   12....       LCALL     ?XSTACK_DISP0_8
+   \   000055   7402         MOV       A,#0x2
+   \   000057   F0           MOVX      @DPTR,A
+    449            dstAddr.endPoint       = ACOINFO_ZB_ENDPOINT;
+   \   000058   7409         MOV       A,#0x9
+   \   00005A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00005D   7401         MOV       A,#0x1
+   \   00005F   F0           MOVX      @DPTR,A
+    450            dstAddr.addr.shortAddr = 0;
+   \   000060   85..82       MOV       DPL,?XSP + 0
+   \   000063   85..83       MOV       DPH,?XSP + 1
+   \   000066   E4           CLR       A
+   \   000067   F0           MOVX      @DPTR,A
+   \   000068   A3           INC       DPTR
+   \   000069   F0           MOVX      @DPTR,A
+    451            
+    452            pReportCmd->numAttr              = 1;
+   \   00006A   85..82       MOV       DPL,?V0
+   \   00006D   85..83       MOV       DPH,?V1
+   \   000070   04           INC       A
+   \   000071   12....       LCALL     ?Subroutine6 & 0xFFFF
+    453            pReportCmd->attrList[0].attrID   = ACOINFO_SAMPLE_VDD_ATTR_ID;
+   \                     ??CrossCallReturnLabel_11:
+   \   000074   A3           INC       DPTR
+   \   000075   7420         MOV       A,#0x20
+   \   000077   12....       LCALL     ?Subroutine4 & 0xFFFF
+    454            pReportCmd->attrList[0].dataType = ZCL_DATATYPE_SINGLE_PREC;
+   \                     ??CrossCallReturnLabel_7:
+   \   00007A   7439         MOV       A,#0x39
+   \   00007C   12....       LCALL     ?Subroutine4 & 0xFFFF
+    455            pReportCmd->attrList[0].attrData = (uint8 *)&vddValue;
+   \                     ??CrossCallReturnLabel_8:
+   \   00007F   A3           INC       DPTR
+   \   000080   74..         MOV       A,#vddValue & 0xff
+   \   000082   F0           MOVX      @DPTR,A
+   \   000083   A3           INC       DPTR
+   \   000084   74..         MOV       A,#(vddValue >> 8) & 0xff
+   \   000086   12....       LCALL     ?Subroutine1 & 0xFFFF
+    456            
+    457            if ( zcl_SendReportCmd( ACOINFO_ZB_ENDPOINT, &dstAddr,
+    458                                   ACOINFO_ZB_AIO_CLUSTER, pReportCmd,
+    459                                   ZCL_FRAME_SERVER_CLIENT_DIR, TRUE, seqNum++ ) == ZCL_STATUS_SUCCESS )
+   \                     ??CrossCallReturnLabel_0:
+   \   000089   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   00008C   75..01       MOV       ?V6,#0x1
+   \   00008F   78..         MOV       R0,#?V6
+   \   000091   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000094   78..         MOV       R0,#?V6
+   \   000096   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000099   78..         MOV       R0,#?V0
+   \   00009B   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00009E   7C0C         MOV       R4,#0xc
+   \   0000A0   7D00         MOV       R5,#0x0
+   \   0000A2   7405         MOV       A,#0x5
+   \   0000A4   12....       LCALL     ?XSTACK_DISP101_8
+   \   0000A7   7901         MOV       R1,#0x1
+   \   0000A9   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
+   \   0000AC   7405         MOV       A,#0x5
+   \   0000AE   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000B1   E9           MOV       A,R1
+   \   0000B2   7012         JNZ       ??acoinfoSample_ReportEvent_3
+    460            {
+    461              debugMessage( ">report Vdd: %fV \r\n",vddValue);
+   \   0000B4                ; Setup parameters for call to function debugMessage
+   \   0000B4   90....       MOV       DPTR,#vddValue
+   \   0000B7   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   0000BA   7A..         MOV       R2,#`?<Constant ">report Vdd: %fV \\r\\n">` & 0xff
+   \   0000BC   7B..         MOV       R3,#(`?<Constant ">report Vdd: %fV \\r\\n">` >> 8) & 0xff
+   \   0000BE   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   0000C1   7404         MOV       A,#0x4
+   \   0000C3   12....       LCALL     ?DEALLOC_XSTACK8
+    462            }
+    463            
+    464            //#define DATA_PIN_6 P0_6            //定义P0.6 红外传感器
+    465            //#define DATA_PIN_5 P0_5            //定义P0.5 光敏传感器
+    466            // 红外
+    467            if(DATA_PIN_6 == 1){
+   \                     ??acoinfoSample_ReportEvent_3:
+   \   0000C6   A286         MOV       C,0x80.6
+   \   0000C8   500E         JNC       ??acoinfoSample_ReportEvent_4
+    468              //有人
+    469              HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
+   \   0000CA                ; Setup parameters for call to function HalLedSet
+   \   0000CA   7A01         MOV       R2,#0x1
+   \   0000CC   7901         MOV       R1,#0x1
+   \   0000CE   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+    470              HumanStatus = true;
+   \   0000D1   90....       MOV       DPTR,#HumanStatus
+   \   0000D4   7401         MOV       A,#0x1
+   \   0000D6   800B         SJMP      ??acoinfoSample_ReportEvent_5
+    471            }else{
+    472              //无人
+    473              HalLedSet( HAL_LED_1, HAL_LED_MODE_OFF );
+   \                     ??acoinfoSample_ReportEvent_4:
+   \   0000D8                ; Setup parameters for call to function HalLedSet
+   \   0000D8   7A00         MOV       R2,#0x0
+   \   0000DA   7901         MOV       R1,#0x1
+   \   0000DC   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+    474              HumanStatus = false;
+   \   0000DF   90....       MOV       DPTR,#HumanStatus
+   \   0000E2   E4           CLR       A
+   \                     ??acoinfoSample_ReportEvent_5:
+   \   0000E3   F0           MOVX      @DPTR,A
+    475            }
+    476            
+    477            // 光敏
+    478            if(DATA_PIN_5 == 1){
+   \   0000E4   A285         MOV       C,0x80.5
+   \   0000E6   500D         JNC       ??acoinfoSample_ReportEvent_6
+    479              //无光
+    480              HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
+   \   0000E8                ; Setup parameters for call to function HalLedSet
+   \   0000E8   7A00         MOV       R2,#0x0
+   \   0000EA   7902         MOV       R1,#0x2
+   \   0000EC   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+    481              LdrStatus = false;
+   \   0000EF   90....       MOV       DPTR,#LdrStatus
+   \   0000F2   E4           CLR       A
+   \   0000F3   800C         SJMP      ??acoinfoSample_ReportEvent_7
+    482            }else{
+    483              //有光
+    484              HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+   \                     ??acoinfoSample_ReportEvent_6:
+   \   0000F5                ; Setup parameters for call to function HalLedSet
+   \   0000F5   7A01         MOV       R2,#0x1
+   \   0000F7   7902         MOV       R1,#0x2
+   \   0000F9   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+    485              LdrStatus = true;
+   \   0000FC   90....       MOV       DPTR,#LdrStatus
+   \   0000FF   7401         MOV       A,#0x1
+   \                     ??acoinfoSample_ReportEvent_7:
+   \   000101   F0           MOVX      @DPTR,A
+    486            }
+    487            
+    488            
+    489            iotReportCmd->numAttr              = 2;
+   \   000102   85..82       MOV       DPL,?V2
+   \   000105   85..83       MOV       DPH,?V3
+   \   000108   7402         MOV       A,#0x2
+   \   00010A   F0           MOVX      @DPTR,A
+    490            iotReportCmd->attrList[0].attrID   = ACOINFO_SAMPLE_HUMAN_ATTR_ID;
+   \   00010B   A3           INC       DPTR
+   \   00010C   14           DEC       A
+   \   00010D   F0           MOVX      @DPTR,A
+   \   00010E   A3           INC       DPTR
+   \   00010F   7420         MOV       A,#0x20
+   \   000111   12....       LCALL     ?Subroutine8 & 0xFFFF
+    491            iotReportCmd->attrList[0].dataType = ZCL_DATATYPE_UINT8;
+   \                     ??CrossCallReturnLabel_20:
+   \   000114   12....       LCALL     ?Subroutine3 & 0xFFFF
+    492            iotReportCmd->attrList[0].attrData = (uint8 *)&HumanStatus;
+   \                     ??CrossCallReturnLabel_5:
+   \   000117   74..         MOV       A,#HumanStatus & 0xff
+   \   000119   F0           MOVX      @DPTR,A
+   \   00011A   A3           INC       DPTR
+   \   00011B   74..         MOV       A,#(HumanStatus >> 8) & 0xff
+   \   00011D   12....       LCALL     ?Subroutine3 & 0xFFFF
+    493            
+    494            iotReportCmd->attrList[1].attrID   = ACOINFO_SAMPLE_LDR_ATTR_ID;
+   \                     ??CrossCallReturnLabel_6:
+   \   000120   A3           INC       DPTR
+   \   000121   A3           INC       DPTR
+   \   000122   7402         MOV       A,#0x2
+   \   000124   F0           MOVX      @DPTR,A
+   \   000125   A3           INC       DPTR
+   \   000126   7420         MOV       A,#0x20
+   \   000128   12....       LCALL     ?Subroutine2 & 0xFFFF
+    495            iotReportCmd->attrList[1].dataType = ZCL_DATATYPE_UINT8;
+   \                     ??CrossCallReturnLabel_3:
+   \   00012B   12....       LCALL     ?Subroutine2 & 0xFFFF
+    496            iotReportCmd->attrList[1].attrData = (uint8 *)&LdrStatus;
+   \                     ??CrossCallReturnLabel_4:
+   \   00012E   A3           INC       DPTR
+   \   00012F   74..         MOV       A,#LdrStatus & 0xff
+   \   000131   F0           MOVX      @DPTR,A
+   \   000132   A3           INC       DPTR
+   \   000133   74..         MOV       A,#(LdrStatus >> 8) & 0xff
+   \   000135   12....       LCALL     ?Subroutine1 & 0xFFFF
+    497            if ( zcl_SendReportCmd( ACOINFO_ZB_ENDPOINT, &dstAddr,
+    498                                   ACOINFO_ZB_DIO_CLUSTER, iotReportCmd,
+    499                                   ZCL_FRAME_SERVER_CLIENT_DIR, TRUE, seqNum++ ) == ZCL_STATUS_SUCCESS )
+   \                     ??CrossCallReturnLabel_1:
+   \   000138   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   00013B   75..01       MOV       ?V6,#0x1
+   \   00013E   78..         MOV       R0,#?V6
+   \   000140   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000143   78..         MOV       R0,#?V6
+   \   000145   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000148   78..         MOV       R0,#?V2
+   \   00014A   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00014D   7C06         MOV       R4,#0x6
+   \   00014F   7D00         MOV       R5,#0x0
+   \   000151   7405         MOV       A,#0x5
+   \   000153   12....       LCALL     ?XSTACK_DISP101_8
+   \   000156   7901         MOV       R1,#0x1
+   \   000158   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
+   \   00015B   7405         MOV       A,#0x5
+   \   00015D   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000160   E9           MOV       A,R1
+   \   000161   7025         JNZ       ??acoinfoSample_ReportEvent_8
+    500            {
+    501              debugMessage( ">report Human:%d Ldr:%d  \r\n",LdrStatus,HumanStatus);
+   \   000163                ; Setup parameters for call to function debugMessage
+   \   000163   90....       MOV       DPTR,#HumanStatus
+   \   000166   E0           MOVX      A,@DPTR
+   \   000167   F5..         MOV       ?V6,A
+   \   000169   75..00       MOV       ?V7,#0x0
+   \   00016C   78..         MOV       R0,#?V6
+   \   00016E   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000171   90....       MOV       DPTR,#LdrStatus
+   \   000174   E0           MOVX      A,@DPTR
+   \   000175   F5..         MOV       ?V6,A
+   \   000177   78..         MOV       R0,#?V6
+   \   000179   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00017C   7A..         MOV       R2,#`?<Constant ">report Human:%d Ldr:...">` & 0xff
+   \   00017E   7B..         MOV       R3,#(`?<Constant ">report Human:%d Ldr:...">` >> 8) & 0xff
+   \   000180   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   000183   7404         MOV       A,#0x4
+   \   000185   12....       LCALL     ?DEALLOC_XSTACK8
+    502            }
+    503            
+    504            //发送Rep数量
+    505            repValue++;
+   \                     ??acoinfoSample_ReportEvent_8:
+   \   000188   90....       MOV       DPTR,#__Constant_1
+   \   00018B   78..         MOV       R0,#?V8
+   \   00018D   12....       LCALL     ?L_MOV_X
+   \   000190   90....       MOV       DPTR,#repValue
+   \   000193   78..         MOV       R0,#?V8
+   \   000195   12....       LCALL     ?L_ADD_TO_X
+    506            repReportCmd->numAttr              = 1;
+   \   000198   85..82       MOV       DPL,?V4
+   \   00019B   85..83       MOV       DPH,?V5
+   \   00019E   7401         MOV       A,#0x1
+   \   0001A0   12....       LCALL     ?Subroutine6 & 0xFFFF
+    507            repReportCmd->attrList[0].attrID   = ACOINFO_SAMPLE_REP_ATTR_ID;
+   \                     ??CrossCallReturnLabel_12:
+   \   0001A3   A3           INC       DPTR
+   \   0001A4   7420         MOV       A,#0x20
+   \   0001A6   12....       LCALL     ?Subroutine5 & 0xFFFF
+    508            repReportCmd->attrList[0].dataType = ZCL_DATATYPE_UINT32;
+   \                     ??CrossCallReturnLabel_9:
+   \   0001A9   7423         MOV       A,#0x23
+   \   0001AB   12....       LCALL     ?Subroutine5 & 0xFFFF
+    509            repReportCmd->attrList[0].attrData = (uint8 *)&repValue;
+   \                     ??CrossCallReturnLabel_10:
+   \   0001AE   A3           INC       DPTR
+   \   0001AF   74..         MOV       A,#repValue & 0xff
+   \   0001B1   F0           MOVX      @DPTR,A
+   \   0001B2   A3           INC       DPTR
+   \   0001B3   74..         MOV       A,#(repValue >> 8) & 0xff
+   \   0001B5   12....       LCALL     ?Subroutine1 & 0xFFFF
+    510            
+    511            if ( zcl_SendReportCmd( ACOINFO_ZB_ENDPOINT, &dstAddr,
+    512                                   ACOINFO_ZB_MEM_CLUSTER, repReportCmd,
+    513                                   ZCL_FRAME_SERVER_CLIENT_DIR, TRUE, seqNum++ ) == ZCL_STATUS_SUCCESS )
+   \                     ??CrossCallReturnLabel_2:
+   \   0001B8   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   0001BB   75..01       MOV       ?V6,#0x1
+   \   0001BE   78..         MOV       R0,#?V6
+   \   0001C0   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   0001C3   78..         MOV       R0,#?V6
+   \   0001C5   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   0001C8   78..         MOV       R0,#?V4
+   \   0001CA   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0001CD   7C00         MOV       R4,#0x0
+   \   0001CF   7D05         MOV       R5,#0x5
+   \   0001D1   ED           MOV       A,R5
+   \   0001D2   12....       LCALL     ?XSTACK_DISP101_8
+   \   0001D5   7901         MOV       R1,#0x1
+   \   0001D7   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
+   \   0001DA   7405         MOV       A,#0x5
+   \   0001DC   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0001DF   E9           MOV       A,R1
+   \   0001E0   7012         JNZ       ??acoinfoSample_ReportEvent_9
+    514            {
+    515              debugMessage( ">report report number:%d \r\n",repValue);
+   \   0001E2                ; Setup parameters for call to function debugMessage
+   \   0001E2   90....       MOV       DPTR,#repValue
+   \   0001E5   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   0001E8   7A..         MOV       R2,#`?<Constant ">report report number...">` & 0xff
+   \   0001EA   7B..         MOV       R3,#(`?<Constant ">report report number...">` >> 8) & 0xff
+   \   0001EC   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   0001EF   7404         MOV       A,#0x4
+   \   0001F1   12....       LCALL     ?DEALLOC_XSTACK8
+    516            }
+    517            
+    518            /** **/
+    519            osal_mem_free( pReportCmd );
+   \                     ??acoinfoSample_ReportEvent_9:
+   \   0001F4                ; Setup parameters for call to function osal_mem_free
+   \   0001F4   AA..         MOV       R2,?V0
+   \   0001F6   AB..         MOV       R3,?V1
+   \   0001F8   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+    520            osal_mem_free( iotReportCmd );
+   \   0001FB                ; Setup parameters for call to function osal_mem_free
+   \   0001FB   AA..         MOV       R2,?V2
+   \   0001FD   AB..         MOV       R3,?V3
+   \   0001FF   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+    521            osal_mem_free( repReportCmd );
+   \   000202                ; Setup parameters for call to function osal_mem_free
+   \   000202   AA..         MOV       R2,?V4
+   \   000204   AB..         MOV       R3,?V5
+   \   000206   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+    522          }
+   \                     ??acoinfoSample_ReportEvent_2:
+   \   000209   740C         MOV       A,#0xc
+   \   00020B   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00020E   7F0C         MOV       R7,#0xc
+   \   000210   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   000213                REQUIRE _A_P0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   85..82       MOV       DPL,?V4
+   \   000004   85..83       MOV       DPH,?V5
+   \   000007   A3           INC       DPTR
+   \   000008   A3           INC       DPTR
+   \   000009   A3           INC       DPTR
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   85..82       MOV       DPL,?V0
+   \   000004   85..83       MOV       DPH,?V1
+   \   000007   A3           INC       DPTR
+   \   000008   A3           INC       DPTR
+   \   000009   A3           INC       DPTR
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL     ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_18:
+   \   000003   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   12....       LCALL     ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_21:
+   \   000003   A3           INC       DPTR
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   85..82       MOV       DPL,?V2
+   \   000004   85..83       MOV       DPH,?V3
+   \   000007   A3           INC       DPTR
+   \   000008   A3           INC       DPTR
+   \   000009   A3           INC       DPTR
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL     ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_19:
+   \   000003   A3           INC       DPTR
+   \   000004   A3           INC       DPTR
+   \   000005   A3           INC       DPTR
+   \   000006   A3           INC       DPTR
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   90....       MOV       DPTR,#??seqNum
+   \   000004   E0           MOVX      A,@DPTR
+   \   000005   F8           MOV       R0,A
+   \   000006   7401         MOV       A,#0x1
+   \   000008   28           ADD       A,R0
+   \   000009   F0           MOVX      @DPTR,A
+   \   00000A                ; Setup parameters for call to function zcl_SendReportCmd
+   \   00000A                ; Setup parameters for call to function zcl_SendReportCmd
+   \   00000A                ; Setup parameters for call to function zcl_SendReportCmd
+   \   00000A   E8           MOV       A,R0
+   \   00000B   F5..         MOV       ?V6,A
+   \   00000D   78..         MOV       R0,#?V6
+   \   00000F   22           RET
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     ??seqNum:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    523          
+    524          /*********************************************************************
+    525          * @fn      zclSampleSw_ProcessCommissioningStatus
+    526          *
+    527          * @brief   Callback in which the status of the commissioning process are reported
+    528          *
+    529          * @param   bdbCommissioningModeMsg - Context message of the status of a commissioning process
+    530          *
+    531          * @return  none
+    532          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    533          static void acoinfoSample_ProcessCommissioningStatus( bdbCommissioningModeMsg_t *bdbCommissioningModeMsg )
+   \                     acoinfoSample_ProcessCommissioningStatus:
+    534          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    535            switch( bdbCommissioningModeMsg->bdbCommissioningMode )
+   \   000004   8A82         MOV       DPL,R2
+   \   000006   8B83         MOV       DPH,R3
+   \   000008   A3           INC       DPTR
+   \   000009   E0           MOVX      A,@DPTR
+   \   00000A   6405         XRL       A,#0x5
+   \   00000C   7029         JNZ       ??acoinfoSample_ProcessCommissioningStatus_0
+    536            {
+    537          #if ZG_BUILD_ENDDEVICE_TYPE    
+    538            case BDB_COMMISSIONING_PARENT_LOST:
+    539              if( bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_NETWORK_RESTORED )
+   \   00000E   8A82         MOV       DPL,R2
+   \   000010   8B83         MOV       DPH,R3
+   \   000012   E0           MOVX      A,@DPTR
+   \   000013   640D         XRL       A,#0xd
+   \   000015   7009         JNZ       ??acoinfoSample_ProcessCommissioningStatus_1
+    540              {
+    541                /*
+    542                *  We did recover from losing parent
+    543                */
+    544                debugMessage( "recover from losing parent\r\n" );
+   \   000017                ; Setup parameters for call to function debugMessage
+   \   000017   7A..         MOV       R2,#`?<Constant "recover from losing p...">` & 0xff
+   \   000019   7B..         MOV       R3,#(`?<Constant "recover from losing p...">` >> 8) & 0xff
+   \   00001B   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   00001E   8017         SJMP      ??acoinfoSample_ProcessCommissioningStatus_0
+    545              }
+    546              else
+    547              {
+    548                /*
+    549                *  Parent not found, attempt to rejoin again after a fixed delay
+    550                */
+    551                osal_start_timerEx( acoinfo_Sample_TaskID, SAMPLEAPP_END_DEVICE_REJOIN_EVT, SAMPLEAPP_END_DEVICE_REJOIN_DELAY );
+   \                     ??acoinfoSample_ProcessCommissioningStatus_1:
+   \   000020                ; Setup parameters for call to function osal_start_timerEx
+   \   000020   90....       MOV       DPTR,#__Constant_3e8
+   \   000023   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   000026   7A01         MOV       R2,#0x1
+   \   000028   7B00         MOV       R3,#0x0
+   \   00002A   90....       MOV       DPTR,#acoinfo_Sample_TaskID
+   \   00002D   E0           MOVX      A,@DPTR
+   \   00002E   F9           MOV       R1,A
+   \   00002F   12....       LCALL     `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
+   \   000032   7404         MOV       A,#0x4
+   \   000034   12....       LCALL     ?DEALLOC_XSTACK8
+    552              }
+    553              break;
+    554          #endif 
+    555            }
+    556          }
+   \                     ??acoinfoSample_ProcessCommissioningStatus_0:
+   \   000037   D083         POP       DPH
+   \   000039   D082         POP       DPL
+   \   00003B   02....       LJMP      ?BRET
+    557          
+    558          /*********************************************************************
+    559          * @fn      acoinfoSample_ReadWriteCallBack
+    560          *
+    561          * @brief   Callback in which the data of the reading/writing attribute
+    562          *
+    563          * @param   clusterId - cluster ID
+    564          * @param   attrId    - attribute ID = base attribute ID + channel number
+    565          * @param   oper      - read/write/get length
+    566          * @param   pValue    - attribute data
+    567          * @param   pLen      - attribute data length
+    568          *
+    569          * @return  Successful if data was read
+    570          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    571          static ZStatus_t acoinfoSample_ReadWriteCallBack( uint16 clusterId, uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen )
+   \                     acoinfoSample_ReadWriteCallBack:
+    572          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000   74F0         MOV       A,#-0x10
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV       ?V6,R2
+   \   000007   8B..         MOV       ?V7,R3
+   \   000009   8C..         MOV       ?V4,R4
+   \   00000B   8D..         MOV       ?V5,R5
+   \   00000D   E9           MOV       A,R1
+   \   00000E   FF           MOV       R7,A
+    573            debugMessage( "gateway send message clusterId:%f  attrId:%f!!!!\r\n",clusterId,attrId );
+   \   00000F                ; Setup parameters for call to function debugMessage
+   \   00000F   78..         MOV       R0,#?V4
+   \   000011   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000014   78..         MOV       R0,#?V6
+   \   000016   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000019   7A..         MOV       R2,#`?<Constant "gateway send message ...">` & 0xff
+   \   00001B   7B..         MOV       R3,#(`?<Constant "gateway send message ...">` >> 8) & 0xff
+   \   00001D   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   000020   7404         MOV       A,#0x4
+   \   000022   12....       LCALL     ?DEALLOC_XSTACK8
+    574            ZStatus_t ret = ZCL_STATUS_FAILURE;
+   \   000025   7E01         MOV       R6,#0x1
+   \   000027   7410         MOV       A,#0x10
+   \   000029   12....       LCALL     ?XSTACK_DISP0_8
+   \   00002C   E0           MOVX      A,@DPTR
+   \   00002D   F5..         MOV       ?V0,A
+   \   00002F   A3           INC       DPTR
+   \   000030   E0           MOVX      A,@DPTR
+   \   000031   F5..         MOV       ?V1,A
+   \   000033   7412         MOV       A,#0x12
+   \   000035   12....       LCALL     ?XSTACK_DISP0_8
+   \   000038   E0           MOVX      A,@DPTR
+   \   000039   F5..         MOV       ?V2,A
+   \   00003B   A3           INC       DPTR
+   \   00003C   E0           MOVX      A,@DPTR
+   \   00003D   F5..         MOV       ?V3,A
+    575          
+    576            switch( clusterId )
+   \   00003F   78..         MOV       R0,#?V6
+   \   000041   12....       LCALL     ?US_SWITCH_SPARSE
+   \                     `?<Jumptable for acoinfoSample_ReadWriteCallBac_0`:
+   \   000044   0000         DW        0
+   \   000046   0300         DW        3
+   \   000048   0600         DW        6
+   \   00004A   ....         DW        ??acoinfoSample_ReadWriteCallBack_0
+   \   00004C   0C00         DW        12
+   \   00004E   ....         DW        ??acoinfoSample_ReadWriteCallBack_1
+   \   000050   0005         DW        1280
+   \   000052   ....         DW        ??acoinfoSample_ReadWriteCallBack_2
+   \   000054   ....         DW        ??acoinfoSample_ReadWriteCallBack_3
+    577            {
+    578              /*
+    579              * 处理 DIO 属性数据
+    580              */
+    581            case ACOINFO_ZB_DIO_CLUSTER:
+    582              ret = acoinfoSample_HandleDioData( attrId, oper, pValue, pLen );
+   \                     ??acoinfoSample_ReadWriteCallBack_0:
+   \   000056   7801         MOV       R0,#0x1
+   \   000058   EF           MOV       A,R7
+   \   000059   606F         JZ        ??acoinfoSample_ReadWriteCallBack_4
+   \   00005B   14           DEC       A
+   \   00005C   6036         JZ        ??acoinfoSample_ReadWriteCallBack_5
+   \   00005E   14           DEC       A
+   \   00005F   7075         JNZ       ??acoinfoSample_ReadWriteCallBack_6
+   \   000061   E5..         MOV       A,?V4
+   \   000063   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_7
+   \   000065   7420         MOV       A,#0x20
+   \   000067   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_7:
+   \   000069   706B         JNZ       ??acoinfoSample_ReadWriteCallBack_6
+   \   00006B   85..82       MOV       DPL,?V0
+   \   00006E   85..83       MOV       DPH,?V1
+   \   000071   E0           MOVX      A,@DPTR
+   \   000072   90....       MOV       DPTR,#LedOnOffStatus
+   \   000075   F0           MOVX      @DPTR,A
+   \   000076   6401         XRL       A,#0x1
+   \   000078   7008         JNZ       ??acoinfoSample_ReadWriteCallBack_8
+   \   00007A   7E01         MOV       R6,#0x1
+   \   00007C                ; Setup parameters for call to function debugMessage
+   \   00007C   7A..         MOV       R2,#`?<Constant "turn ON\\r\\n">` & 0xff
+   \   00007E   7B..         MOV       R3,#(`?<Constant "turn ON\\r\\n">` >> 8) & 0xff
+   \   000080   8006         SJMP      ??acoinfoSample_ReadWriteCallBack_9
+   \                     ??acoinfoSample_ReadWriteCallBack_8:
+   \   000082   7E00         MOV       R6,#0x0
+   \   000084                ; Setup parameters for call to function debugMessage
+   \   000084   7A..         MOV       R2,#`?<Constant "turn OFF\\r\\n">` & 0xff
+   \   000086   7B..         MOV       R3,#(`?<Constant "turn OFF\\r\\n">` >> 8) & 0xff
+   \                     ??acoinfoSample_ReadWriteCallBack_9:
+   \   000088   12....       LCALL     `??debugMessage::?relay`; Banked call to: debugMessage
+   \   00008B                ; Setup parameters for call to function HalLedSet
+   \   00008B   EE           MOV       A,R6
+   \   00008C   FA           MOV       R2,A
+   \   00008D   7901         MOV       R1,#0x1
+   \   00008F   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+   \   000092   8040         SJMP      ??CrossCallReturnLabel_15
+   \                     ??acoinfoSample_ReadWriteCallBack_5:
+   \   000094   E5..         MOV       A,?V4
+   \   000096   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_10
+   \   000098   7420         MOV       A,#0x20
+   \   00009A   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_10:
+   \   00009C   7005         JNZ       ??acoinfoSample_ReadWriteCallBack_11
+   \   00009E   90....       MOV       DPTR,#LedOnOffStatus
+   \   0000A1   801F         SJMP      ??acoinfoSample_ReadWriteCallBack_12
+   \                     ??acoinfoSample_ReadWriteCallBack_11:
+   \   0000A3   7402         MOV       A,#0x2
+   \   0000A5   65..         XRL       A,?V4
+   \   0000A7   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_13
+   \   0000A9   7420         MOV       A,#0x20
+   \   0000AB   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_13:
+   \   0000AD   7005         JNZ       ??acoinfoSample_ReadWriteCallBack_14
+   \   0000AF   90....       MOV       DPTR,#LdrStatus
+   \   0000B2   800E         SJMP      ??acoinfoSample_ReadWriteCallBack_12
+   \                     ??acoinfoSample_ReadWriteCallBack_14:
+   \   0000B4   E8           MOV       A,R0
+   \   0000B5   65..         XRL       A,?V4
+   \   0000B7   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_15
+   \   0000B9   7420         MOV       A,#0x20
+   \   0000BB   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_15:
+   \   0000BD   7017         JNZ       ??acoinfoSample_ReadWriteCallBack_6
+   \   0000BF   90....       MOV       DPTR,#HumanStatus
+   \                     ??acoinfoSample_ReadWriteCallBack_12:
+   \   0000C2   E0           MOVX      A,@DPTR
+   \   0000C3   85..82       MOV       DPL,?V0
+   \   0000C6   85..83       MOV       DPH,?V1
+   \   0000C9   F0           MOVX      @DPTR,A
+   \                     ??acoinfoSample_ReadWriteCallBack_4:
+   \   0000CA   85..82       MOV       DPL,?V2
+   \   0000CD   85..83       MOV       DPH,?V3
+   \   0000D0   E8           MOV       A,R0
+   \   0000D1   12....       LCALL     ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   0000D4   7800         MOV       R0,#0x0
+   \                     ??acoinfoSample_ReadWriteCallBack_6:
+   \   0000D6   02....       LJMP      ??acoinfoSample_ReadWriteCallBack_16 & 0xFFFF
+    583              break;
+    584              
+    585              /*
+    586              * 处理 AIO 属性数据
+    587              */
+    588            case ACOINFO_ZB_AIO_CLUSTER:
+    589              ret = acoinfoSample_HandleAioData( attrId, oper, pValue, pLen );
+   \                     ??acoinfoSample_ReadWriteCallBack_1:
+   \   0000D9   7801         MOV       R0,#0x1
+   \   0000DB   EF           MOV       A,R7
+   \   0000DC   602D         JZ        ??acoinfoSample_ReadWriteCallBack_17
+   \   0000DE   14           DEC       A
+   \   0000DF   7037         JNZ       ??acoinfoSample_ReadWriteCallBack_18
+   \   0000E1   E5..         MOV       A,?V4
+   \   0000E3   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_19
+   \   0000E5   7420         MOV       A,#0x20
+   \   0000E7   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_19:
+   \   0000E9   702D         JNZ       ??acoinfoSample_ReadWriteCallBack_18
+   \   0000EB                ; Setup parameters for call to function acoinfoSample_VddValueGet
+   \   0000EB   12....       LCALL     `??acoinfoSample_VddValueGet::?relay`; Banked call to: acoinfoSample_VddValueGet
+   \   0000EE   EA           MOV       A,R2
+   \   0000EF   F8           MOV       R0,A
+   \   0000F0   EB           MOV       A,R3
+   \   0000F1   F9           MOV       R1,A
+   \   0000F2   EC           MOV       A,R4
+   \   0000F3   FA           MOV       R2,A
+   \   0000F4   ED           MOV       A,R5
+   \   0000F5   FB           MOV       R3,A
+   \   0000F6   90....       MOV       DPTR,#vddValue
+   \   0000F9   12....       LCALL     ?XSTORE_R0123
+   \   0000FC   90....       MOV       DPTR,#vddValue
+   \   0000FF   12....       LCALL     ?XLOAD_R0123
+   \   000102   85..82       MOV       DPL,?V0
+   \   000105   85..83       MOV       DPH,?V1
+   \   000108   12....       LCALL     ?XSTORE_R0123
+   \                     ??acoinfoSample_ReadWriteCallBack_17:
+   \   00010B   85..82       MOV       DPL,?V2
+   \   00010E   85..83       MOV       DPH,?V3
+   \   000111   7404         MOV       A,#0x4
+   \   000113   12....       LCALL     ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   000116   7800         MOV       R0,#0x0
+   \                     ??acoinfoSample_ReadWriteCallBack_18:
+   \   000118   8060         SJMP      ??acoinfoSample_ReadWriteCallBack_16
+    590              break;
+    591              
+    592              /*
+    593              * 处理 MEM 属性数据
+    594              */
+    595            case ACOINFO_ZB_MEM_CLUSTER:
+    596              ret = acoinfoSample_HandleMemData( attrId, oper, pValue, pLen );
+   \                     ??acoinfoSample_ReadWriteCallBack_2:
+   \   00011A   7801         MOV       R0,#0x1
+   \   00011C   EF           MOV       A,R7
+   \   00011D   604D         JZ        ??acoinfoSample_ReadWriteCallBack_20
+   \   00011F   14           DEC       A
+   \   000120   601F         JZ        ??acoinfoSample_ReadWriteCallBack_21
+   \   000122   14           DEC       A
+   \   000123   7055         JNZ       ??acoinfoSample_ReadWriteCallBack_16
+   \   000125   E5..         MOV       A,?V4
+   \   000127   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_22
+   \   000129   7420         MOV       A,#0x20
+   \   00012B   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_22:
+   \   00012D   704B         JNZ       ??acoinfoSample_ReadWriteCallBack_16
+   \   00012F   85..82       MOV       DPL,?V0
+   \   000132   85..83       MOV       DPH,?V1
+   \   000135   E0           MOVX      A,@DPTR
+   \   000136   90....       MOV       DPTR,#repValue
+   \   000139   12....       LCALL     ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   00013C   A3           INC       DPTR
+   \   00013D   F0           MOVX      @DPTR,A
+   \   00013E   A3           INC       DPTR
+   \   00013F   8036         SJMP      ??acoinfoSample_ReadWriteCallBack_23
+   \                     ??acoinfoSample_ReadWriteCallBack_21:
+   \   000141   E5..         MOV       A,?V4
+   \   000143   7004         JNZ       ??acoinfoSample_ReadWriteCallBack_24
+   \   000145   7420         MOV       A,#0x20
+   \   000147   65..         XRL       A,?V5
+   \                     ??acoinfoSample_ReadWriteCallBack_24:
+   \   000149   702F         JNZ       ??acoinfoSample_ReadWriteCallBack_16
+   \   00014B                ; Setup parameters for call to function acoinfoSample_VddValueGet
+   \   00014B   12....       LCALL     `??acoinfoSample_VddValueGet::?relay`; Banked call to: acoinfoSample_VddValueGet
+   \   00014E   90....       MOV       DPTR,#vddValue
+   \   000151   12....       LCALL     ?XSTORE_R2345
+   \   000154   90....       MOV       DPTR,#repValue
+   \   000157   78..         MOV       R0,#?V4
+   \   000159   12....       LCALL     ?L_MOV_X
+   \   00015C   78..         MOV       R0,#?V4
+   \   00015E   12....       LCALL     ?UL_TO_FLT
+   \   000161   85..82       MOV       DPL,?V0
+   \   000164   85..83       MOV       DPH,?V1
+   \   000167   78..         MOV       R0,#?V4
+   \   000169   12....       LCALL     ?L_MOV_TO_X
+   \                     ??acoinfoSample_ReadWriteCallBack_20:
+   \   00016C   85..82       MOV       DPL,?V2
+   \   00016F   85..83       MOV       DPH,?V3
+   \   000172   7404         MOV       A,#0x4
+   \   000174   F0           MOVX      @DPTR,A
+   \   000175   A3           INC       DPTR
+   \   000176   E4           CLR       A
+   \                     ??acoinfoSample_ReadWriteCallBack_23:
+   \   000177   F0           MOVX      @DPTR,A
+   \   000178   7800         MOV       R0,#0x0
+   \                     ??acoinfoSample_ReadWriteCallBack_16:
+   \   00017A   E8           MOV       A,R0
+   \   00017B   FE           MOV       R6,A
+    597              break;
+    598              
+    599            default:
+    600              break;
+    601            }
+    602            
+    603            return ( ret );
+   \                     ??acoinfoSample_ReadWriteCallBack_3:
+   \   00017C   EE           MOV       A,R6
+   \   00017D   F9           MOV       R1,A
+   \   00017E                REQUIRE ?Subroutine0
+   \   00017E                ; // Fall through to label ?Subroutine0
+    604          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F08         MOV       R7,#0x8
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+    605          
+    606          /*********************************************************************
+    607          * @fn      acoinfoSample_HandleDioData
+    608          *
+    609          * @brief   Handle data for DIO attribute
+    610          *
+    611          * @param   attrId - attribute ID
+    612          * @param   oper   - read/write/get length operation
+    613          * @param   pValue - attribute data
+    614          * @param   pLen   - attribute data length
+    615          *
+    616          * @return  Successful if data was read
+    617          */
+    618          static ZStatus_t acoinfoSample_HandleDioData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen )
+    619          {
+    620            ZStatus_t ret = ZCL_STATUS_FAILURE;
+    621            
+    622            switch( oper )
+    623            {
+    624              /*
+    625              * 读取状态
+    626              */
+    627            case ZCL_OPER_READ:
+    628              /*
+    629              * 读取 LED 的状态
+    630              */
+    631              if ( attrId == ACOINFO_SAMPLE_LED_ATTR_ID )
+    632              {
+    633                *pValue = LedOnOffStatus;
+    634                *pLen   = SAMPLEAPP_DIO_ATTR_DATA_LEN;
+    635                ret    = ZCL_STATUS_SUCCESS;
+    636              }
+    637              
+    638              /*
+    639              * 读取光敏状态
+    640              */
+    641              if ( attrId == ACOINFO_SAMPLE_LDR_ATTR_ID )
+    642              {
+    643                *pValue = LdrStatus;
+    644                *pLen   = SAMPLEAPP_DIO_ATTR_DATA_LEN;
+    645                ret    = ZCL_STATUS_SUCCESS;
+    646              }
+    647              /*
+    648              * 读取人体状态
+    649              */      
+    650              if ( attrId == ACOINFO_SAMPLE_HUMAN_ATTR_ID )
+    651              {
+    652                *pValue = HumanStatus;
+    653                *pLen   = SAMPLEAPP_DIO_ATTR_DATA_LEN;
+    654                ret    = ZCL_STATUS_SUCCESS;
+    655              }
+    656              break;
+    657              
+    658              /*
+    659              * 控制 LED 的状态
+    660              */          
+    661            case ZCL_OPER_WRITE:
+    662              if (  attrId == ACOINFO_SAMPLE_LED_ATTR_ID )
+    663              {
+    664                LedOnOffStatus = *pValue;
+    665                acoinfoSample_LedOnOff( LedOnOffStatus );
+    666                ret = ZCL_STATUS_SUCCESS;
+    667              }
+    668              break;
+    669              
+    670              /*
+    671              * 获取属性值的长度
+    672              */
+    673            case ZCL_OPER_LEN:
+    674              *pLen = SAMPLEAPP_DIO_ATTR_DATA_LEN;
+    675              ret  = ZCL_STATUS_SUCCESS;
+    676              break;
+    677              
+    678            default:
+    679              break;
+    680            }
+    681            
+    682            return ( ret );
+    683          }
+    684          /*********************************************************************
+    685          * @fn      acoinfoSample_HandleMemData
+    686          *
+    687          * @brief   Handle data for AIO attribute
+    688          *
+    689          * @param   attrId - attribute ID
+    690          * @param   oper   - read/write/get length operation
+    691          * @param   pValue - attribute data
+    692          * @param   pLen   - attribute data length
+    693          *
+    694          * @return  Successful if data was read
+    695          */
+    696          static ZStatus_t acoinfoSample_HandleMemData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen )
+    697          {
+    698            ZStatus_t ret = ZCL_STATUS_FAILURE;
+    699            
+    700            switch( oper )
+    701            {
+    702              /*
+    703              * 获取上报数量
+    704              */
+    705            case ZCL_OPER_READ:
+    706              if ( attrId == ACOINFO_SAMPLE_REP_ATTR_ID )
+    707              {
+    708                vddValue = acoinfoSample_VddValueGet();
+    709                
+    710                *(float *)pValue = repValue;
+    711                *pLen = SAMPLEAPP_MEM_ATTR_DATA_LEN;
+    712                ret  = ZCL_STATUS_SUCCESS;
+    713              }
+    714              break;
+    715              
+    716            case ZCL_OPER_WRITE:
+    717             if (  attrId == ACOINFO_SAMPLE_REP_ATTR_ID )
+    718              {
+    719                repValue = *pValue;
+    720                ret = ZCL_STATUS_SUCCESS;
+    721              }
+    722              break;
+    723              
+    724              /*
+    725              * 获取属性值的长度
+    726              */
+    727            case ZCL_OPER_LEN:
+    728              *pLen = SAMPLEAPP_MEM_ATTR_DATA_LEN;
+    729              ret  = ZCL_STATUS_SUCCESS;
+    730              break;
+    731              
+    732            default:
+    733              break;
+    734            }
+    735            
+    736            return ( ret );
+    737          }
+    738          /*********************************************************************
+    739          * @fn      acoinfoSample_HandleAioData
+    740          *
+    741          * @brief   Handle data for AIO attribute
+    742          *
+    743          * @param   attrId - attribute ID
+    744          * @param   oper   - read/write/get length operation
+    745          * @param   pValue - attribute data
+    746          * @param   pLen   - attribute data length
+    747          *
+    748          * @return  Successful if data was read
+    749          */
+    750          static ZStatus_t acoinfoSample_HandleAioData( uint16 attrId, uint8 oper, uint8 *pValue, uint16 *pLen )
+    751          {
+    752            ZStatus_t ret = ZCL_STATUS_FAILURE;
+    753            
+    754            switch( oper )
+    755            {
+    756              /*
+    757              * 获取内部电压值
+    758              */
+    759            case ZCL_OPER_READ:
+    760              if ( attrId == ACOINFO_SAMPLE_VDD_ATTR_ID )
+    761              {
+    762                vddValue = acoinfoSample_VddValueGet();
+    763                
+    764                *(float *)pValue = vddValue;
+    765                *pLen = SAMPLEAPP_AIO_ATTR_DATA_LEN;
+    766                ret  = ZCL_STATUS_SUCCESS;
+    767              }
+    768              break;
+    769              
+    770            case ZCL_OPER_WRITE:
+    771              break;
+    772              
+    773              /*
+    774              * 获取属性值的长度
+    775              */
+    776            case ZCL_OPER_LEN:
+    777              *pLen = SAMPLEAPP_AIO_ATTR_DATA_LEN;
+    778              ret  = ZCL_STATUS_SUCCESS;
+    779              break;
+    780              
+    781            default:
+    782              break;
+    783            }
+    784            
+    785            return ( ret );
+    786          }
+    787          
+    788          /*********************************************************************
+    789          * @fn      acoinfoSample_LedOnOff
+    790          *
+    791          * @brief   On/Off led
+    792          *
+    793          * @param   status - On/Off status
+    794          *
+    795          * @return  none
+    796          */
+    797          static void acoinfoSample_LedOnOff( bool status )
+    798          {
+    799            uint8 mode;
+    800            
+    801            if (status == true)
+    802            {
+    803              mode = HAL_LED_MODE_ON;
+    804              debugMessage( "turn ON\r\n" );
+    805            }
+    806            else
+    807            {
+    808              mode = HAL_LED_MODE_OFF;
+    809              debugMessage( "turn OFF\r\n" );
+    810            }
+    811            
+    812            HalLedSet( HAL_LED_1, mode );
+    813          }
+    814          
+    815          /*********************************************************************
+    816          * @fn      acoinfoSample_VddValueGet
+    817          *
+    818          * @brief   get Vdd value
+    819          *
+    820          * @param   status - On/Off status
+    821          *
+    822          * @return  Vdd value
+    823          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    824          static float acoinfoSample_VddValueGet( void )
+   \                     acoinfoSample_VddValueGet:
+    825          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000   74F0         MOV       A,#-0x10
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+    826            HalAdcSetReference( HAL_ADC_REF_125V );
+   \   000005                ; Setup parameters for call to function HalAdcSetReference
+   \   000005   7900         MOV       R1,#0x0
+   \   000007   12....       LCALL     `??HalAdcSetReference::?relay`; Banked call to: HalAdcSetReference
+    827            return ( ((float)HalAdcCheckVddRaw() / 127 * 1.15) );
+   \   00000A                ; Setup parameters for call to function HalAdcCheckVddRaw
+   \   00000A   12....       LCALL     `??HalAdcCheckVddRaw::?relay`; Banked call to: HalAdcCheckVddRaw
+   \   00000D   E9           MOV       A,R1
+   \   00000E   F5..         MOV       ?V0,A
+   \   000010   E4           CLR       A
+   \   000011   F5..         MOV       ?V1,A
+   \   000013   F5..         MOV       ?V2,A
+   \   000015   F5..         MOV       ?V3,A
+   \   000017   78..         MOV       R0,#?V0
+   \   000019   12....       LCALL     ?UL_TO_FLT
+   \   00001C   90....       MOV       DPTR,#__Constant_42fe0000
+   \   00001F   78..         MOV       R0,#?V4
+   \   000021   12....       LCALL     ?L_MOV_X
+   \   000024   78..         MOV       R0,#?V0
+   \   000026   79..         MOV       R1,#?V4
+   \   000028   12....       LCALL     ?FLT_DIV
+   \   00002B   90....       MOV       DPTR,#__Constant_3f933333
+   \   00002E   78..         MOV       R0,#?V4
+   \   000030   12....       LCALL     ?L_MOV_X
+   \   000033   78..         MOV       R0,#?V0
+   \   000035   79..         MOV       R1,#?V4
+   \   000037   12....       LCALL     ?FLT_MUL
+   \   00003A   AA..         MOV       R2,?V0
+   \   00003C   AB..         MOV       R3,?V1
+   \   00003E   AC..         MOV       R4,?V2
+   \   000040   AD..         MOV       R5,?V3
+   \   000042   80..         SJMP      ?Subroutine0
+    828          }
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for acoinfoSample_NwkState>`:
+   \   000000   ....         DW `?<Constant "Initialized - not sta...">`
+   \   000002   ....         DW `?<Constant "Initialized - not con...">`
+   \   000004   ....         DW `?<Constant "Discovering PAN\\'s to ...">`
+   \   000006   ....         DW `?<Constant "Joining a PAN">`
+   \   000008   ....         DW `?<Constant "ReJoining a PAN in se...">`
+   \   00000A   ....         DW `?<Constant "Joined but not yet au...">`
+   \   00000C   ....         DW `?<Constant "Started as device aft...">`
+   \   00000E   ....         DW `?<Constant "Device joined, authen...">`
+   \   000010   ....         DW `?<Constant "Started as Zigbee Coo...">`
+   \   000012   ....         DW `?<Constant "Started as Zigbee Coo...">`
+   \   000014   ....         DW `?<Constant "Device has lost infor...">`
+   \   000016   ....         DW `?<Constant "Device is sending Kee...">`
+   \   000018   ....         DW `?<Constant "Device is waiting bef...">`
+   \   00001A   ....         DW `?<Constant "ReJoining a PAN in se...">_1`
+   \   00001C   ....         DW `?<Constant "ReJoining a PAN in Tr...">`
+   \   00001E   ....         DW `?<Constant "ReJoining a PAN in Tr...">_1`
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_Init::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_event_loop::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_event_loop
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??debugMessage::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    debugMessage
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_ReportEvent::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_ReportEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_ProcessCommissioningStatus::?re`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_ProcessCommissioningStatus
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_ReadWriteCallBack::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_ReadWriteCallBack
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??acoinfoSample_VddValueGet::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    acoinfoSample_VddValueGet
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Initialized - not sta...">`:
+   \   000000   496E6974     DB "Initialized - not started automatically"
+   \            69616C69
+   \            7A656420
+   \            2D206E6F
+   \            74207374
+   \            61727465
+   \            64206175
+   \            746F6D61
+   \            74696361
+   \            6C6C7900
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Initialized - not con...">`:
+   \   000000   496E6974     DB "Initialized - not connected to anything"
+   \            69616C69
+   \            7A656420
+   \            2D206E6F
+   \            7420636F
+   \            6E6E6563
+   \            74656420
+   \            746F2061
+   \            6E797468
+   \            696E6700
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Discovering PAN\\'s to ...">`:
+   \   000000   44697363     DB "Discovering PAN's to join"
+   \            6F766572
+   \            696E6720
+   \            50414E27
+   \            7320746F
+   \            206A6F69
+   \            6E00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Joining a PAN">`:
+   \   000000   4A6F696E     DB "Joining a PAN"
+   \            696E6720
+   \            61205041
+   \            4E00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ReJoining a PAN in se...">`:
+   \   000000   52654A6F     DB 52H, 65H, 4AH, 6FH, 69H, 6EH, 69H, 6EH
+   \            696E696E
+   \   000008   67206120     DB 67H, 20H, 61H, 20H, 50H, 41H, 4EH, 20H
+   \            50414E20
+   \   000010   696E2073     DB 69H, 6EH, 20H, 73H, 65H, 63H, 75H, 72H
+   \            65637572
+   \   000018   65206D6F     DB 65H, 20H, 6DH, 6FH, 64H, 65H, 20H, 73H
+   \            64652073
+   \   000020   63616E6E     DB 63H, 61H, 6EH, 6EH, 69H, 6EH, 67H, 20H
+   \            696E6720
+   \   000028   696E2063     DB 69H, 6EH, 20H, 63H, 75H, 72H, 72H, 65H
+   \            75727265
+   \   000030   6E742063     DB 6EH, 74H, 20H, 63H, 68H, 61H, 6EH, 6EH
+   \            68616E6E
+   \   000038   656C2C20     DB 65H, 6CH, 2CH, 20H, 6FH, 6EH, 6CH, 79H
+   \            6F6E6C79
+   \   000040   20666F72     DB 20H, 66H, 6FH, 72H, 20H, 65H, 6EH, 64H
+   \            20656E64
+   \   000048   20646576     DB 20H, 64H, 65H, 76H, 69H, 63H, 65H, 73H
+   \            69636573
+   \   000050   00           DB 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Joined but not yet au...">`:
+   \   000000   4A6F696E     DB "Joined but not yet authenticated by trust center"
+   \            65642062
+   \            7574206E
+   \            6F742079
+   \            65742061
+   \            75746865
+   \            6E746963
+   \            61746564
+   \            20627920
+   \            74727573
+   \            74206365
+   \            6E746572
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Started as device aft...">`:
+   \   000000   53746172     DB "Started as device after authentication"
+   \            74656420
+   \            61732064
+   \            65766963
+   \            65206166
+   \            74657220
+   \            61757468
+   \            656E7469
+   \            63617469
+   \            6F6E00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Device joined, authen...">`:
+   \   000000   44657669     DB "Device joined, authenticated and is a router"
+   \            6365206A
+   \            6F696E65
+   \            642C2061
+   \            75746865
+   \            6E746963
+   \            61746564
+   \            20616E64
+   \            20697320
+   \            6120726F
+   \            75746572
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Started as Zigbee Coo...">`:
+   \   000000   53746172     DB "Started as Zigbee Coordinator"
+   \            74656420
+   \            6173205A
+   \            69676265
+   \            6520436F
+   \            6F726469
+   \            6E61746F
+   \            7200    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Device has lost infor...">`:
+   \   000000   44657669     DB "Device has lost information about its parent.."
+   \            63652068
+   \            6173206C
+   \            6F737420
+   \            696E666F
+   \            726D6174
+   \            696F6E20
+   \            61626F75
+   \            74206974
+   \            73207061
+   \            72656E74
+   \            2E2E00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Device is sending Kee...">`:
+   \   000000   44657669     DB "Device is sending KeepAlive message to its parent"
+   \            63652069
+   \            73207365
+   \            6E64696E
+   \            67204B65
+   \            6570416C
+   \            69766520
+   \            6D657373
+   \            61676520
+   \            746F2069
+   \            74732070
+   \            6172656E
+   \            7400    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Device is waiting bef...">`:
+   \   000000   44657669     DB "Device is waiting before trying to rejoin"
+   \            63652069
+   \            73207761
+   \            6974696E
+   \            67206265
+   \            666F7265
+   \            20747279
+   \            696E6720
+   \            746F2072
+   \            656A6F69
+   \            6E00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ReJoining a PAN in se...">_1`:
+   \   000000   52654A6F     DB 52H, 65H, 4AH, 6FH, 69H, 6EH, 69H, 6EH
+   \            696E696E
+   \   000008   67206120     DB 67H, 20H, 61H, 20H, 50H, 41H, 4EH, 20H
+   \            50414E20
+   \   000010   696E2073     DB 69H, 6EH, 20H, 73H, 65H, 63H, 75H, 72H
+   \            65637572
+   \   000018   65206D6F     DB 65H, 20H, 6DH, 6FH, 64H, 65H, 20H, 73H
+   \            64652073
+   \   000020   63616E6E     DB 63H, 61H, 6EH, 6EH, 69H, 6EH, 67H, 20H
+   \            696E6720
+   \   000028   696E2061     DB 69H, 6EH, 20H, 61H, 6CH, 6CH, 20H, 63H
+   \            6C6C2063
+   \   000030   68616E6E     DB 68H, 61H, 6EH, 6EH, 65H, 6CH, 73H, 2CH
+   \            656C732C
+   \   000038   206F6E6C     DB 20H, 6FH, 6EH, 6CH, 79H, 20H, 66H, 6FH
+   \            7920666F
+   \   000040   7220656E     DB 72H, 20H, 65H, 6EH, 64H, 20H, 64H, 65H
+   \            64206465
+   \   000048   76696365     DB 76H, 69H, 63H, 65H, 73H, 0
+   \            7300    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ReJoining a PAN in Tr...">`:
+   \   000000   52654A6F     DB 52H, 65H, 4AH, 6FH, 69H, 6EH, 69H, 6EH
+   \            696E696E
+   \   000008   67206120     DB 67H, 20H, 61H, 20H, 50H, 41H, 4EH, 20H
+   \            50414E20
+   \   000010   696E2054     DB 69H, 6EH, 20H, 54H, 72H, 75H, 73H, 74H
+   \            72757374
+   \   000018   2063656E     DB 20H, 63H, 65H, 6EH, 74H, 65H, 72H, 20H
+   \            74657220
+   \   000020   6D6F6465     DB 6DH, 6FH, 64H, 65H, 20H, 73H, 63H, 61H
+   \            20736361
+   \   000028   6E6E696E     DB 6EH, 6EH, 69H, 6EH, 67H, 20H, 69H, 6EH
+   \            6720696E
+   \   000030   20637572     DB 20H, 63H, 75H, 72H, 72H, 65H, 6EH, 74H
+   \            72656E74
+   \   000038   20636861     DB 20H, 63H, 68H, 61H, 6EH, 6EH, 65H, 6CH
+   \            6E6E656C
+   \   000040   2C206F6E     DB 2CH, 20H, 6FH, 6EH, 6CH, 79H, 20H, 66H
+   \            6C792066
+   \   000048   6F722065     DB 6FH, 72H, 20H, 65H, 6EH, 64H, 20H, 64H
+   \            6E642064
+   \   000050   65766963     DB 65H, 76H, 69H, 63H, 65H, 73H, 0
+   \            657300  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ReJoining a PAN in Tr...">_1`:
+   \   000000   52654A6F     DB 52H, 65H, 4AH, 6FH, 69H, 6EH, 69H, 6EH
+   \            696E696E
+   \   000008   67206120     DB 67H, 20H, 61H, 20H, 50H, 41H, 4EH, 20H
+   \            50414E20
+   \   000010   696E2054     DB 69H, 6EH, 20H, 54H, 72H, 75H, 73H, 74H
+   \            72757374
+   \   000018   2063656E     DB 20H, 63H, 65H, 6EH, 74H, 65H, 72H, 20H
+   \            74657220
+   \   000020   6D6F6465     DB 6DH, 6FH, 64H, 65H, 20H, 73H, 63H, 61H
+   \            20736361
+   \   000028   6E6E696E     DB 6EH, 6EH, 69H, 6EH, 67H, 20H, 69H, 6EH
+   \            6720696E
+   \   000030   20616C6C     DB 20H, 61H, 6CH, 6CH, 20H, 63H, 68H, 61H
+   \            20636861
+   \   000038   6E6E656C     DB 6EH, 6EH, 65H, 6CH, 73H, 2CH, 20H, 6FH
+   \            732C206F
+   \   000040   6E6C7920     DB 6EH, 6CH, 79H, 20H, 66H, 6FH, 72H, 20H
+   \            666F7220
+   \   000048   656E6420     DB 65H, 6EH, 64H, 20H, 64H, 65H, 76H, 69H
+   \            64657669
+   \   000050   63657300     DB 63H, 65H, 73H, 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "attempt rejoin\\r\\n">`:
+   \   000000   61747465     DB "attempt rejoin\015\012"
+   \            6D707420
+   \            72656A6F
+   \            696E0D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "booting to skip past ...">`:
+   \   000000   626F6F74     DB "booting to skip past NV Restore\015\012"
+   \            696E6720
+   \            746F2073
+   \            6B697020
+   \            70617374
+   \            204E5620
+   \            52657374
+   \            6F72650D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "chick button:S2 \\r\\n">`:
+   \   000000   63686963     DB "chick button:S2 \015\012"
+   \            6B206275
+   \            74746F6E
+   \            3A533220
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ZDO state: %s\\r\\n">`:
+   \   000000   5A444F20     DB "ZDO state: %s\015\012"
+   \            73746174
+   \            653A2025
+   \            730D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant ">report Vdd: %fV \\r\\n">`:
+   \   000000   3E726570     DB ">report Vdd: %fV \015\012"
+   \            6F727420
+   \            5664643A
+   \            20256656
+   \            200D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant ">report Human:%d Ldr:...">`:
+   \   000000   3E726570     DB ">report Human:%d Ldr:%d  \015\012"
+   \            6F727420
+   \            48756D61
+   \            6E3A2564
+   \            204C6472
+   \            3A256420
+   \            200D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant ">report report number...">`:
+   \   000000   3E726570     DB ">report report number:%d \015\012"
+   \            6F727420
+   \            7265706F
+   \            7274206E
+   \            756D6265
+   \            723A2564
+   \            200D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "recover from losing p...">`:
+   \   000000   7265636F     DB "recover from losing parent\015\012"
+   \            76657220
+   \            66726F6D
+   \            206C6F73
+   \            696E6720
+   \            70617265
+   \            6E740D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "gateway send message ...">`:
+   \   000000   67617465     DB 67H, 61H, 74H, 65H, 77H, 61H, 79H, 20H
+   \            77617920
+   \   000008   73656E64     DB 73H, 65H, 6EH, 64H, 20H, 6DH, 65H, 73H
+   \            206D6573
+   \   000010   73616765     DB 73H, 61H, 67H, 65H, 20H, 63H, 6CH, 75H
+   \            20636C75
+   \   000018   73746572     DB 73H, 74H, 65H, 72H, 49H, 64H, 3AH, 25H
+   \            49643A25
+   \   000020   66202061     DB 66H, 20H, 20H, 61H, 74H, 74H, 72H, 49H
+   \            74747249
+   \   000028   643A2566     DB 64H, 3AH, 25H, 66H, 21H, 21H, 21H, 21H
+   \            21212121
+   \   000030   0D0A00       DB 0DH, 0AH, 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "turn ON\\r\\n">`:
+   \   000000   7475726E     DB "turn ON\015\012"
+   \            204F4E0D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "turn OFF\\r\\n">`:
+   \   000000   7475726E     DB "turn OFF\015\012"
+   \            204F4646
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_1388:
+   \   000000   88130000     DD 5000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_1:
+   \   000000   01000000     DD 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_3e8:
+   \   000000   E8030000     DD 1000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_42fe0000:
+   \   000000   0000FE42     DD 42FE0000H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_3f933333:
+   \   000000   3333933F     DD 3F933333H
+    829          /****************************************************************************
+    830          ****************************************************************************/
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      0     42   acoinfoSample_Init
+        0     38   -> HalUARTOpen
+        0     38   -> RegisterForKeys
+        0     38   -> bdb_RegisterCommissioningStatusCB
+        0     38   -> bdb_RegisterSimpleDescriptor
+        0     38   -> bdb_StartCommissioning
+        0     42   -> osal_start_timerEx
+        0     38   -> zcl_registerAttrList
+        0     38   -> zcl_registerReadWriteCB
+      2      4   acoinfoSample_ProcessCommissioningStatus
+        2      0   -> debugMessage
+        2      4   -> osal_start_timerEx
+      1     24   acoinfoSample_ReadWriteCallBack
+        0     16   -> HalLedSet
+        0     16   -> acoinfoSample_VddValueGet
+        0     16   -> debugMessage
+        0     20   -> debugMessage
+      0     49   acoinfoSample_ReportEvent
+        0     32   -> HalLedSet
+        0     32   -> acoinfoSample_VddValueGet
+        0     36   -> debugMessage
+        0     32   -> osal_mem_alloc
+        0     32   -> osal_mem_free
+        0     37   -> zcl_SendReportCmd
+      0     48   acoinfoSample_VddValueGet
+        0     16   -> HalAdcCheckVddRaw
+        0     16   -> HalAdcSetReference
+      0     16   acoinfoSample_event_loop
+        0     12   -> HalLedBlink
+        0     12   -> HalLedSet
+        0     12   -> ZDAppCheckForHoldKey
+        0     12   -> acoinfoSample_ReportEvent
+        0     12   -> bdb_StartCommissioning
+        0     12   -> bdb_ZedAttemptRecoverNwk
+        0     12   -> bdb_resetLocalAction
+        0     12   -> debugMessage
+        0     14   -> debugMessage
+        0     12   -> osal_msg_deallocate
+        0     12   -> osal_msg_receive
+        0     16   -> osal_start_timerEx
+      0     50   debugMessage
+        0     12   -> HalUARTWrite
+        0     14   -> vsprintf
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      28  ?<Constant ">report Human:%d Ldr:...">
+      20  ?<Constant ">report Vdd: %fV \r\n">
+      28  ?<Constant ">report report number...">
+      47  ?<Constant "Device has lost infor...">
+      50  ?<Constant "Device is sending Kee...">
+      42  ?<Constant "Device is waiting bef...">
+      45  ?<Constant "Device joined, authen...">
+      26  ?<Constant "Discovering PAN\'s to ...">
+      40  ?<Constant "Initialized - not con...">
+      40  ?<Constant "Initialized - not sta...">
+      49  ?<Constant "Joined but not yet au...">
+      14  ?<Constant "Joining a PAN">
+      87  ?<Constant "ReJoining a PAN in Tr...">
+      84  ?<Constant "ReJoining a PAN in Tr...">_1
+      81  ?<Constant "ReJoining a PAN in se...">
+      78  ?<Constant "ReJoining a PAN in se...">_1
+      30  ?<Constant "Started as Zigbee Coo...">
+      39  ?<Constant "Started as device aft...">
+      16  ?<Constant "ZDO state: %s\r\n">
+      17  ?<Constant "attempt rejoin\r\n">
+      34  ?<Constant "booting to skip past ...">
+      19  ?<Constant "chick button:S2 \r\n">
+      51  ?<Constant "gateway send message ...">
+      29  ?<Constant "recover from losing p...">
+      11  ?<Constant "turn OFF\r\n">
+      10  ?<Constant "turn ON\r\n">
+      32  ?<Initializer for acoinfoSample_NwkState>
+       5  ?Subroutine0
+      16  ?Subroutine1
+       8  ?Subroutine2
+       4  ?Subroutine3
+      11  ?Subroutine4
+      11  ?Subroutine5
+       5  ?Subroutine6
+       5  ?Subroutine7
+      11  ?Subroutine8
+       1  HumanStatus
+       1  LdrStatus
+       1  LedOnOffStatus
+       1  P0DIR
+       1  P0SEL
+       1  _A_P0
+       4  __Constant_1
+       4  __Constant_1388
+       4  __Constant_3e8
+       4  __Constant_3f933333
+       4  __Constant_42fe0000
+     202  acoinfoSample_Init
+       6  acoinfoSample_Init::?relay
+      32  acoinfoSample_NwkState
+      62  acoinfoSample_ProcessCommissioningStatus
+       6  acoinfoSample_ProcessCommissioningStatus::?relay
+     382  acoinfoSample_ReadWriteCallBack
+       6  acoinfoSample_ReadWriteCallBack::?relay
+     531  acoinfoSample_ReportEvent
+       6  acoinfoSample_ReportEvent::?relay
+     128  acoinfoSample_UartBuf
+      68  acoinfoSample_VddValueGet
+       6  acoinfoSample_VddValueGet::?relay
+     262  acoinfoSample_event_loop
+       6  acoinfoSample_event_loop::?relay
+       1  acoinfo_Sample_TaskID
+      82  debugMessage
+       6  debugMessage::?relay
+       4  repValue
+       1  seqNum
+       4  vddValue
+
+ 
+ 1 665 bytes in segment BANKED_CODE
+    42 bytes in segment BANK_RELAYS
+     3 bytes in segment SFR_AN
+    32 bytes in segment XDATA_I
+    32 bytes in segment XDATA_ID
+ 1 035 bytes in segment XDATA_ROM_C
+   141 bytes in segment XDATA_Z
+ 
+    74 bytes of CODE     memory
+ 1 015 bytes of CONST    memory (+ 20 bytes shared)
+     0 bytes of DATA     memory (+  3 bytes shared)
+ 1 665 bytes of HUGECODE memory
+   173 bytes of XDATA    memory
+
+Errors: none
+Warnings: none

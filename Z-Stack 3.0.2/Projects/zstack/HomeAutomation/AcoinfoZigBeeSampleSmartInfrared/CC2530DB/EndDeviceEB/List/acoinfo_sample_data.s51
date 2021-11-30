@@ -1,0 +1,671 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.10.1.4655 for 8051              30/Jul/2021  11:47:12
+// Copyright 2004-2017 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample_data.c
+//    Command line       =  
+//        -f C:\Users\WenHao\AppData\Local\Temp\EW3D9D.tmp
+//        ("D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample_data.c"
+//        -D CSTX_BOARD -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE
+//        -D xPOWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D
+//        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
+//        xMT_APP_CNF_FUNC -D LCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D
+//        ZCL_IDENTIFY -D ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D ZCL_BASIC -D
+//        ZCL_REPORTING_DEVICE -D HAL_LED=TRUE -D HAL_UART=TRUE -D HAL_KEY=TRUE
+//        -D ISR_KEYINTERRUPT -lC "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List"
+//        -lA "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List"
+//        --diag_suppress Pe001,Pa010 -o
+//        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\Obj"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -f
+//        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0}
+//        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
+//        -DENABLE_LED4_DISABLE_S1) -f "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\Source\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\Source\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes)
+//    Locale             =  Chinese (Simplified)_China.936
+//    List file          =  
+//        D:\work\zigbee\ti_cc2530_zstack\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\CC2530DB\EndDeviceEB\List\acoinfo_sample_data.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME acoinfo_sample_data
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC acoinfoSample_Attrs
+        PUBLIC acoinfoSample_InClusterList
+        PUBLIC acoinfoSample_NumAttributes
+        PUBLIC zclSampleSw_SimpleDesc
+// D:\work\zigbee\ti_cc2530_zstack\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\AcoinfoZigBeeSampleLight\Source\acoinfo_sample_data.c
+//    1 /**************************************************************************************************
+//    2   Filename:       acoinfo_samplesw_data.c
+//    3   Revised:        $Date: 2014-07-30 12:57:37 -0700 (Wed, 30 Jul 2014) $
+//    4   Revision:       $Revision: 39591 $
+//    5 
+//    6   Description:    Acoinfo sample device application.
+//    7 
+//    8   Copyright 2006-2014 Texas Instruments Incorporated. All rights reserved.
+//    9 
+//   10   IMPORTANT: Your use of this Software is limited to those specific rights
+//   11   granted under the terms of a software license agreement between the user
+//   12   who downloaded the software, his/her employer (which must be your employer)
+//   13   and Texas Instruments Incorporated (the "License").  You may not use this
+//   14   Software unless you agree to abide by the terms of the License. The License
+//   15   limits your use, and you acknowledge, that the Software may not be modified,
+//   16   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   17   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   18   frequency transceiver, which is integrated into your product.  Other than for
+//   19   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   20   works of, modify, distribute, perform, display or sell this Software and/or
+//   21   its documentation for any purpose.
+//   22 
+//   23   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   24   PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   25   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   26   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   27   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   28   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   29   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   30   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   31   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   32   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   33   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   34 
+//   35   Should you have any questions regarding your right to use this Software,
+//   36   contact Texas Instruments Incorporated at www.TI.com.
+//   37 **************************************************************************************************/
+//   38 
+//   39 /*********************************************************************
+//   40  * INCLUDES
+//   41  */
+//   42 #include "ZComDef.h"
+//   43 #include "OSAL.h"
+//   44 #include "AF.h"
+//   45 #include "ZDConfig.h"
+//   46 
+//   47 #include "zcl.h"
+//   48 #include "zcl_general.h"
+//   49 #include "zcl_ha.h"
+//   50 #include "zcl_poll_control.h"
+//   51 #include "zcl_electrical_measurement.h"
+//   52 #include "zcl_diagnostic.h"
+//   53 #include "zcl_meter_identification.h"
+//   54 #include "zcl_appliance_identification.h"
+//   55 #include "zcl_appliance_events_alerts.h"
+//   56 #include "zcl_power_profile.h"
+//   57 #include "zcl_appliance_control.h"
+//   58 #include "zcl_appliance_statistics.h"
+//   59 #include "zcl_hvac.h"
+//   60 #include "hal_uart.h"
+//   61 
+//   62 #include "acoinfo_sample.h"
+//   63 #include "acoinfo_generic_profile.h"
+//   64 
+//   65 /*********************************************************************
+//   66  * CONSTANTS
+//   67  */
+//   68 #define SAMPLE_DEVICE_VERSION       1
+//   69 #define SAMPLE_FLAGS                0
+//   70 
+//   71 /*********************************************************************
+//   72  * MACROS
+//   73  */
+//   74 #define ACOINFO_ZB_GENERIC_MODEL(str) \ 
+//   75        {\ 
+//   76           ACOINFO_ZB_BASIC_CLUSTER,\ 
+//   77           {\ 
+//   78             ACOINFO_ZB_MODEL_ID_ATTR,\ 
+//   79             ZCL_DATATYPE_CHAR_STR,\ 
+//   80             ACCESS_CONTROL_READ,\ 
+//   81             (void *)str\ 
+//   82           }\ 
+//   83         },
+//   84 
+//   85 #define ACOINFO_ZB_MANUFACTURER_NAME(str) \ 
+//   86       {\ 
+//   87          ACOINFO_ZB_BASIC_CLUSTER,\ 
+//   88          {\ 
+//   89           ACOINFO_ZB_MANUFACTURER_NAME_ATTR,\ 
+//   90           ZCL_DATATYPE_CHAR_STR,\ 
+//   91           ACCESS_CONTROL_READ,\ 
+//   92           (void *)str\ 
+//   93          }\ 
+//   94       },
+//   95 
+//   96 #define ACOINFO_ZB_DIO(n, flag) \ 
+//   97         {\ 
+//   98           ACOINFO_ZB_DIO_CLUSTER,\ 
+//   99           {  \ 
+//  100             ACOINFO_ZB_DIO_ATTR_BASE + n,\ 
+//  101             ZCL_DATATYPE_BOOLEAN,\ 
+//  102             flag,\ 
+//  103             NULL,\ 
+//  104           }\ 
+//  105         },
+//  106 
+//  107 #define ACOINFO_ZB_AIO(n, flag) \ 
+//  108         {\ 
+//  109           ACOINFO_ZB_AIO_CLUSTER,\ 
+//  110           { \ 
+//  111             ACOINFO_ZB_AIO_ATTR_BASE + n,\ 
+//  112             ZCL_DATATYPE_SINGLE_PREC,\ 
+//  113             flag,\ 
+//  114             NULL,\ 
+//  115           }\ 
+//  116         },
+//  117 
+//  118 #define ACOINFO_ZB_MEM(n, flag) \ 
+//  119         {\ 
+//  120           ACOINFO_ZB_MEM_CLUSTER,\ 
+//  121           {  \ 
+//  122             ACOINFO_ZB_MEM_ATTR_BASE + n,\ 
+//  123             ZCL_DATATYPE_UINT32,\ 
+//  124             flag,\ 
+//  125             NULL,\ 
+//  126           }\ 
+//  127         },
+//  128 
+//  129 #define ACOINFO_ZB_COMMON(attr, var) \ 
+//  130         {\ 
+//  131           ACOINFO_ZB_COMMON_CLUSTER,\ 
+//  132           {\ 
+//  133             attr,\ 
+//  134             ZCL_DATATYPE_UINT32,\ 
+//  135             ACCESS_CONTROL_READ,\ 
+//  136             (void *)&var,\ 
+//  137           }\ 
+//  138         },
+//  139 
+//  140 /*********************************************************************
+//  141  * LOCAL FUNCTIONS
+//  142  */
+//  143 /*********************************************************************
+//  144  * LOCAL VARIABLES
+//  145  */
+//  146 /*
+//  147  * Basic Cluster
+//  148  */
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  149 static const uint8 acoinfoSample_GenericModel[] = { 22, 'a','c','o','i','n','f','o','.','z','i','g','b','e','e','.','g','e','n','e','r','i','c'}; // model ID 
+acoinfoSample_GenericModel:
+        DB 22
+        DB 97
+        DB 99
+        DB 111
+        DB 105
+        DB 110
+        DB 102
+        DB 111
+        DB 46
+        DB 122
+        DB 105
+        DB 103
+        DB 98
+        DB 101
+        DB 101
+        DB 46
+        DB 103
+        DB 101
+        DB 110
+        DB 101
+        DB 114
+        DB 105
+        DB 99
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  150 static const uint8 acoinfoSample_ManufacturerName[] = { 17, 'e','d','g','e','r','o','s','.','s','m','a','r','t','.','h','u','m'}; // manufacturer 名
+acoinfoSample_ManufacturerName:
+        DB 17
+        DB 101
+        DB 100
+        DB 103
+        DB 101
+        DB 114
+        DB 111
+        DB 115
+        DB 46
+        DB 115
+        DB 109
+        DB 97
+        DB 114
+        DB 116
+        DB 46
+        DB 104
+        DB 117
+        DB 109
+//  151 
+//  152 /*
+//  153  * Acoinfo generic cluster common attribute
+//  154  */
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  155 static uint32 dioActiveMask   = 0x7; // DIO 有效通道掩码
+dioActiveMask:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for dioActiveMask>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  156 static uint32 dioWritableMask = 0x1; // DIO 可写通道掩码
+dioWritableMask:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for dioWritableMask>`
+        REQUIRE __INIT_XDATA_I
+//  157 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  158 static uint32 aioActiveMask   = 0x1; // AIO 有效通道掩码
+aioActiveMask:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for aioActiveMask>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//  159 static uint32 aioWritableMask = 0x0; // AIO 可写通道掩码
+aioWritableMask:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+//  160 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  161 static uint32  memActiveMask   = 0x1; // MEM 有效通道掩码
+memActiveMask:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for memActiveMask>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  162 static uint32  memWritableMask = 0x1; // MEM 可写通道掩码
+memWritableMask:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for memWritableMask>`
+        REQUIRE __INIT_XDATA_I
+//  163 /*********************************************************************
+//  164  * GLOBAL VARIABLES
+//  165  */
+//  166 /*********************************************************************
+//  167  * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+//  168  */
+//  169 /*
+//  170  * NOTE: The attributes listed in the AttrRec must be in ascending order
+//  171  * per cluster to allow right function of the Foundation discovery commands
+//  172  */
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  173 CONST zclAttrRec_t acoinfoSample_Attrs[] =
+acoinfoSample_Attrs:
+        DATA16
+        DW 0
+        DW 5
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW acoinfoSample_GenericModel
+        DW 0
+        DW 4
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW acoinfoSample_ManufacturerName
+        DW 6
+        DW 8192
+        DATA8
+        DB 16
+        DB 3
+        DATA16
+        DW 0H
+        DW 6
+        DW 8193
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW 0H
+        DW 6
+        DW 8194
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW 0H
+        DW 12
+        DW 8192
+        DATA8
+        DB 57
+        DB 1
+        DATA16
+        DW 0H
+        DW 1280
+        DW 8192
+        DATA8
+        DB 35
+        DB 3
+        DATA16
+        DW 0H
+        DW 768
+        DW 8192
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW dioActiveMask
+        DW 768
+        DW 8193
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW dioWritableMask
+        DW 768
+        DW 8194
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW aioActiveMask
+        DW 768
+        DW 8195
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW aioWritableMask
+        DW 768
+        DW 8196
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW memActiveMask
+        DW 768
+        DW 8197
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW memWritableMask
+//  174 {
+//  175   /*
+//  176    * 添加 ACOINFO ZigBee 通用设备的 model ID (只读)
+//  177    */
+//  178   ACOINFO_ZB_GENERIC_MODEL( acoinfoSample_GenericModel )
+//  179 
+//  180   /*
+//  181    * 添加一个 manufacturer 名（只读）
+//  182    */
+//  183   ACOINFO_ZB_MANUFACTURER_NAME( acoinfoSample_ManufacturerName )
+//  184 
+//  185   /*
+//  186    * 添加一个开关量，即 LED 所使用的属性（可读写）
+//  187    */
+//  188   ACOINFO_ZB_DIO( ACOINFO_SAMPLE_LED_ATTR_CHAN_NUM,  ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE )
+//  189     
+//  190    /*
+//  191    * 添加一个开关量，即 人体红外感应器(只读)
+//  192    */
+//  193   ACOINFO_ZB_DIO( ACOINFO_SAMPLE_HUMAN_ATTR_CHAN_NUM,  ACCESS_CONTROL_READ )
+//  194     
+//  195    /*
+//  196    * 添加一个开关量，即 红外感应器(只读)
+//  197    */
+//  198   ACOINFO_ZB_DIO( ACOINFO_SAMPLE_LDR_ATTR_CHAN_NUM,  ACCESS_CONTROL_READ )
+//  199     
+//  200   /*
+//  201    * 添加一个模拟量，即 Vdd 所使用的属性（只读）
+//  202    */
+//  203   ACOINFO_ZB_AIO( ACOINFO_SAMPLE_VDD_ATTR_CHAN_NUM,  ACCESS_CONTROL_READ )
+//  204 
+//  205   /*
+//  206    * 添加一个MEM内存，即发包数量所使用的属性（只读）
+//  207    */
+//  208   ACOINFO_ZB_MEM( ACOINFO_SAMPLE_REP_ATTR_CHAN_NUM,  ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE )
+//  209     
+//  210     
+//  211   /*
+//  212    * 添加开关量通用属性（可读写）
+//  213    */
+//  214   ACOINFO_ZB_COMMON( ACOINFO_ZB_DIO_ACTIVE_ATTR, dioActiveMask )
+//  215   ACOINFO_ZB_COMMON( ACOINFO_ZB_DIO_WRITE_ATTR,  dioWritableMask )
+//  216       
+//  217   /*
+//  218    * 添加模拟量通用属性（只读）
+//  219    */
+//  220   ACOINFO_ZB_COMMON( ACOINFO_ZB_AIO_ACTIVE_ATTR, aioActiveMask )
+//  221   ACOINFO_ZB_COMMON( ACOINFO_ZB_AIO_WRITE_ATTR,  aioWritableMask )
+//  222     
+//  223   /*
+//  224    * 添加一个内存，通量属性（可读写）
+//  225    */
+//  226   ACOINFO_ZB_COMMON( ACOINFO_ZB_MEM_ACTIVE_ATTR, memActiveMask )
+//  227   ACOINFO_ZB_COMMON( ACOINFO_ZB_MEM_WRITE_ATTR, memWritableMask )
+//  228 
+//  229 };
+//  230 
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  231 uint8 CONST acoinfoSample_NumAttributes = ( sizeof(acoinfoSample_Attrs) / sizeof(acoinfoSample_Attrs[0]) );
+acoinfoSample_NumAttributes:
+        DB 13
+//  232 
+//  233 /*********************************************************************
+//  234  * SIMPLE DESCRIPTOR
+//  235  */
+//  236 /*
+//  237  * This is the Cluster ID List and should be filled with Application
+//  238  * specific cluster IDs.
+//  239  */
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  240 const cId_t acoinfoSample_InClusterList[] =
+acoinfoSample_InClusterList:
+        DATA16
+        DW 0
+        DW 6
+        DW 12
+        DW 1280
+        DW 768
+//  241 {
+//  242   ZCL_CLUSTER_ID_GEN_BASIC,
+//  243   ACOINFO_ZB_DIO_CLUSTER,
+//  244   ACOINFO_ZB_AIO_CLUSTER,
+//  245   ACOINFO_ZB_MEM_CLUSTER,
+//  246   ACOINFO_ZB_COMMON_CLUSTER,
+//  247 };
+//  248 
+//  249 #define ACOINFO_SAMPLE_MAX_INCLUSTERS    ( sizeof( acoinfoSample_InClusterList ) / sizeof( acoinfoSample_InClusterList[0] ))
+//  250 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  251 SimpleDescriptionFormat_t zclSampleSw_SimpleDesc =
+zclSampleSw_SimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSampleSw_SimpleDesc>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for dioActiveMask>`:
+        DATA32
+        DD 7
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for dioWritableMask>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for aioActiveMask>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for memActiveMask>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for memWritableMask>`:
+        DATA32
+        DD 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleSw_SimpleDesc>`:
+        DATA8
+        DB 1
+        DATA16
+        DW 260
+        DW 259
+        DATA8
+        DB 1
+        DB 5
+        DATA16
+        DW acoinfoSample_InClusterList
+        DATA8
+        DB 0
+        DATA16
+        DW 0H
+
+        END
+//  252 {
+//  253   ACOINFO_ZB_ENDPOINT,                  //  int Endpoint;
+//  254   ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId[2];
+//  255   ZCL_HA_DEVICEID_ON_OFF_LIGHT_SWITCH,  //  uint16 AppDeviceId[2];
+//  256   SAMPLE_DEVICE_VERSION,                //  int   AppDevVer:4;
+//  257   SAMPLE_FLAGS,                         //  int   AppFlags:4;
+//  258   ACOINFO_SAMPLE_MAX_INCLUSTERS,        //  byte  AppNumInClusters;
+//  259   (cId_t *)acoinfoSample_InClusterList, //  byte *pAppInClusterList;
+//  260   0,                                    //  byte  AppNumInClusters;
+//  261   NULL                                  //  byte *pAppInClusterList;
+//  262 };
+// 
+// 105 bytes in segment CODE_C
+//  32 bytes in segment XDATA_I
+//  32 bytes in segment XDATA_ID
+//  51 bytes in segment XDATA_ROM_C
+//   4 bytes in segment XDATA_Z
+// 
+// 137 bytes of CODE  memory
+//  51 bytes of CONST memory
+//  36 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none
